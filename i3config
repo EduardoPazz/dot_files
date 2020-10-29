@@ -1,0 +1,315 @@
+# ~/.i3/config
+
+# Set mod key
+set $mod Mod4
+
+# Autostart applications
+exec --no-startup-id xfce4-clipman
+exec --no-startup-id pavucontrol
+exec_always --no-startup-id ~/.config/polybar/launch.sh 
+
+# Bindings
+
+## Mouse+$mod to drag floating windows
+floating_modifier $mod
+
+## Launch Terminal
+bindsym $mod+Return exec xfce4-terminal
+
+## Kill focused window
+bindsym $mod+Shift+q kill
+
+## Kill window with click
+bindsym $mod+Ctrl+x --release exec --no-startup-id xkill
+
+## Start dmenu
+bindsym $mod+d exec --no-startup-id dmenu_run -nb "#31363b" -sb "#5ebbed"
+
+## Volume controls
+bindsym $mod+F10 exec "pulsemixer --change-volume +5; notify-send 'volume up'"
+bindsym $mod+F9 exec "pulsemixer --change-volume -5; notify-send 'volume down'"
+
+## Screen brightness controls
+bindsym $mod+F12 exec "xbacklight -inc 10; notify-send 'brightness up'"
+bindsym $mod+F11 exec "xbacklight -dec 10; notify-send 'brightness down'"
+
+## Frequently Used Applications
+bindsym $mod+F2 exec firefox
+bindsym $mod+F3 exec thunar
+bindsym $mod+F4 exec qpdfview 
+
+bindsym $mod+F5 exec gvim 
+bindsym $mod+F6 exec code 
+bindsym $mod+F7 exec discord 
+bindsym $mod+F8 exec telegram
+
+## PrintScreen bindings
+bindsym Print exec --no-startup-id xfce4-screenshooter
+bindsym $mod+Print --release exec --no-startup-id spectacle -w
+bindsym $mod+Shift+Print --release exec --no-startup-id xfce4-screenshooter -cr
+
+## Change focus
+bindsym $mod+Left focus left
+bindsym $mod+Down focus down
+bindsym $mod+Up focus up
+bindsym $mod+Right focus right
+
+## Move focused window
+bindsym $mod+Shift+Left move left
+bindsym $mod+Shift+Down move down
+bindsym $mod+Shift+Up move up
+bindsym $mod+Shift+Right move right
+
+## Split orientation
+bindsym $mod+h split h;exec notify-send 'tile horizontally'
+bindsym $mod+v split v;exec notify-send 'tile vertically'
+
+## Toggle fullscreen mode for the focused container
+bindsym $mod+f fullscreen toggle
+
+## Change container layout (stacked, tabbed, toggle split)
+bindsym $mod+s layout stacking
+bindsym $mod+w layout tabbed
+bindsym $mod+e layout toggle split
+
+## Toggle tiling / floating
+bindsym $mod+Shift+space floating toggle
+
+## Change focus between tiling / floating windows
+bindsym $mod+space focus mode_toggle
+
+## Focus the parent container
+bindsym $mod+a focus parent
+
+## Navigate workspaces next / previous
+bindsym $mod+Ctrl+Right workspace next
+bindsym $mod+Ctrl+Left workspace prev
+
+## Reload the configuration file
+bindsym $mod+Shift+c reload
+
+## Restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
+bindsym $mod+Shift+r restart
+
+## Lock screen
+bindsym $mod+l exec --no-startup-id blurlock
+
+## Workspaces
+
+set $ws1 1:I
+set $ws2 2:II
+set $ws3 3:III
+set $ws4 4:IV
+set $ws5 5:V
+set $ws6 6:VI
+set $ws7 7:VII
+set $ws8 8:VIII
+
+### switch to workspace 
+bindsym $mod+1 workspace $ws1
+bindsym $mod+2 workspace $ws2
+bindsym $mod+3 workspace $ws3
+bindsym $mod+4 workspace $ws4
+bindsym $mod+5 workspace $ws5
+bindsym $mod+6 workspace $ws6
+bindsym $mod+7 workspace $ws7
+bindsym $mod+8 workspace $ws8
+
+### switch to workspace using numpad
+bindsym $mod+Mod2+KP_1 workspace $ws1
+bindsym $mod+Mod2+KP_2 workspace $ws2
+bindsym $mod+Mod2+KP_3 workspace $ws3
+bindsym $mod+Mod2+KP_4 workspace $ws4
+bindsym $mod+Mod2+KP_5 workspace $ws5
+bindsym $mod+Mod2+KP_6 workspace $ws6
+bindsym $mod+Mod2+KP_7 workspace $ws7
+bindsym $mod+Mod2+KP_8 workspace $ws8
+
+### Move focused container to workspace
+bindsym $mod+Ctrl+1 move container to workspace $ws1
+bindsym $mod+Ctrl+2 move container to workspace $ws2
+bindsym $mod+Ctrl+3 move container to workspace $ws3
+bindsym $mod+Ctrl+4 move container to workspace $ws4
+bindsym $mod+Ctrl+5 move container to workspace $ws5
+bindsym $mod+Ctrl+6 move container to workspace $ws6
+bindsym $mod+Ctrl+7 move container to workspace $ws7
+bindsym $mod+Ctrl+8 move container to workspace $ws8
+
+### Move focused container to workspace using numpad
+bindsym $mod+Ctrl+Mod2+KP_1 move container to workspace $ws1
+bindsym $mod+Ctrl+Mod2+KP_2 move container to workspace $ws2
+bindsym $mod+Ctrl+Mod2+KP_3 move container to workspace $ws3
+bindsym $mod+Ctrl+Mod2+KP_4 move container to workspace $ws4
+bindsym $mod+Ctrl+Mod2+KP_5 move container to workspace $ws5
+bindsym $mod+Ctrl+Mod2+KP_6 move container to workspace $ws6
+bindsym $mod+Ctrl+Mod2+KP_7 move container to workspace $ws7
+bindsym $mod+Ctrl+Mod2+KP_8 move container to workspace $ws8
+
+### Move to workspace with focused container
+bindsym $mod+Shift+1 move container to workspace $ws1; workspace $ws1
+bindsym $mod+Shift+2 move container to workspace $ws2; workspace $ws2
+bindsym $mod+Shift+3 move container to workspace $ws3; workspace $ws3
+bindsym $mod+Shift+4 move container to workspace $ws4; workspace $ws4
+bindsym $mod+Shift+5 move container to workspace $ws5; workspace $ws5
+bindsym $mod+Shift+6 move container to workspace $ws6; workspace $ws6
+bindsym $mod+Shift+7 move container to workspace $ws7; workspace $ws7
+bindsym $mod+Shift+8 move container to workspace $ws8; workspace $ws8
+
+### Move to workspace with focused container using numpad
+bindsym $mod+Shift+Mod2+KP_1 move container to workspace $ws1; workspace $ws1
+bindsym $mod+Shift+Mod2+KP_2 move container to workspace $ws2; workspace $ws2
+bindsym $mod+Shift+Mod2+KP_3 move container to workspace $ws3; workspace $ws3
+bindsym $mod+Shift+Mod2+KP_4 move container to workspace $ws4; workspace $ws4
+bindsym $mod+Shift+Mod2+KP_5 move container to workspace $ws5; workspace $ws5
+bindsym $mod+Shift+Mod2+KP_6 move container to workspace $ws6; workspace $ws6
+bindsym $mod+Shift+Mod2+KP_7 move container to workspace $ws7; workspace $ws7
+bindsym $mod+Shift+Mod2+KP_8 move container to workspace $ws8; workspace $ws8
+
+## Set shut down, restart and locking features
+bindsym $mod+0 mode "$mode_system"
+set $mode_system (l)ock, (e)xit, switch_(u)ser, (s)uspend, (h)ibernate, (r)eboot, (Shift+s)hutdown
+mode "$mode_system" {
+    bindsym l exec --no-startup-id i3lock -p win, mode "default"
+    bindsym s exec --no-startup-id systemctl suspend, mode "default"
+    bindsym e exec --no-startup-id i3-msg exit, mode "default"
+    bindsym h exec --no-startup-id systemctl hibernate, mode "default"
+    bindsym r exec --no-startup-id systemctl reboot, mode "default"
+    bindsym Shift+s exec --no-startup-id systemctl poweroff, mode "default"
+
+    # exit system mode: "Enter" or "Escape"
+    bindsym Return mode "default"
+    bindsym Escape mode "default"
+}
+
+## Resize window (you can also use the mouse for that)
+bindsym $mod+r mode "resize"
+mode "resize" {
+        # These bindings trigger as soon as you enter the resize mode
+        # Pressing left will shrink the window’s width.
+        # Pressing right will grow the window’s width.
+        # Pressing up will shrink the window’s height.
+        # Pressing down will grow the window’s height.
+
+        bindsym Left resize shrink width 5 px or 5 ppt
+        bindsym Down resize grow height 5 px or 5 ppt
+        bindsym Up resize shrink height 5 px or 5 ppt
+        bindsym Right resize grow width 5 px or 5 ppt
+
+        # exit resize mode: Enter or Escape
+        bindsym Return mode "default"
+        bindsym Escape mode "default"
+}
+
+## Monitors Settings
+# exec xrandr --output VGA1 --auto --left-of LVDS1
+
+# set $mode_monitor LVDS1: f (turn off) | n (turn on)
+
+# bindsym $mod+m mode "$mode_monitor"
+
+#mode "$mode_monitor" {
+#
+#        bindsym f exec xrandr --output LVDS1 --off
+#        bindsym n exec xrandr --output LVDS1 --auto --right-of VGA1
+#
+#        # exit resize mode: Enter or Escape
+#        bindsym Return mode "default"
+#        bindsym Escape mode "default"
+#}
+
+# Window Management Settings
+
+## Redirections
+
+assign [class="discord"] $ws8
+
+## Switch to workspace with urgent window automatically
+for_window [urgent=latest] focus
+
+## Hide borders
+hide_edge_borders none
+
+## Title setting
+title_align center
+
+## Font
+font pango: NotoSans 12
+
+## Configure border style <normal|1pixel|pixel xx|none|pixel>
+default_border pixel 3 
+default_floating_border normal
+
+
+## Colors
+set $base00 #050608
+set $base01 #1a1b1c
+set $base02 #28292a
+set $base03 #474849
+set $base04 #a3a5a6
+set $base05 #c1c3c4
+set $base06 #cfd1d2
+set $base07 #dddfe0
+set $base08 #b53b50
+set $base09 #ea770d
+set $base0A #c9d364
+set $base0B #06ea61
+set $base0C #42fff9
+set $base0D #5EBBED
+set $base0E #ea5ce2
+set $base0F #cd6320
+
+## Window Colours           border  background  text    indicator
+client.focused              $base0D $base0D     $base00 $base01
+client.focused_inactive     $base02 $base02     $base03 $base01
+client.unfocused            $base01 $base02     $base03 $base01
+client.urgent               $base02 $base08     $base07 $base08
+
+
+# I3-Gaps Setting
+
+## Set inner/outer gaps
+gaps inner 15 
+gaps outer 0
+
+## Smart gaps (gaps used if only more than one container on the workspace)
+smart_gaps on 
+
+## Smart borders (draw borders around container only if it is not the only container on this workspace) 
+smart_borders on
+
+## Press $mod+Shift+g to enter the gap mode. Choose o or i for modifying outer/inner gaps. Press one of + / - (in-/decrement for current workspace) or 0 (remove gaps for current workspace). If you also press Shift with these keys, the change will be global for all workspaces.
+set $mode_gaps Gaps: (o) outer, (i) inner
+set $mode_gaps_outer Outer Gaps: +|-|0 (local), Shift + +|-|0 (global)
+set $mode_gaps_inner Inner Gaps: +|-|0 (local), Shift + +|-|0 (global)
+bindsym $mod+Shift+g mode "$mode_gaps"
+
+mode "$mode_gaps" {
+        bindsym o      mode "$mode_gaps_outer"
+        bindsym i      mode "$mode_gaps_inner"
+        bindsym Return mode "default"
+        bindsym Escape mode "default"
+}
+mode "$mode_gaps_inner" {
+        bindsym plus  gaps inner current plus 5
+        bindsym minus gaps inner current minus 5
+        bindsym 0     gaps inner current set 0
+
+        bindsym Shift+plus  gaps inner all plus 5
+        bindsym Shift+minus gaps inner all minus 5
+        bindsym Shift+0     gaps inner all set 0
+
+        bindsym Return mode "default"
+        bindsym Escape mode "default"
+}
+mode "$mode_gaps_outer" {
+        bindsym plus  gaps outer current plus 5
+        bindsym minus gaps outer current minus 5
+        bindsym 0     gaps outer current set 0
+
+        bindsym Shift+plus  gaps outer all plus 5
+        bindsym Shift+minus gaps outer all minus 5
+        bindsym Shift+0     gaps outer all set 0
+
+        bindsym Return mode "default"
+        bindsym Escape mode "default"
+}
