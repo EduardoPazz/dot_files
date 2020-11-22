@@ -6,6 +6,7 @@ set $mod Mod4
 # Autostart applications
 exec --no-startup-id xfce4-clipman
 exec --no-startup-id pavucontrol
+exec --no-startup-id brave-browser
 exec_always --no-startup-id ~/.config/polybar/launch.sh 
 
 # Bindings
@@ -34,14 +35,13 @@ bindsym $mod+F12 exec "xbacklight -inc 10; notify-send 'brightness up'"
 bindsym $mod+F11 exec "xbacklight -dec 10; notify-send 'brightness down'"
 
 ## Frequently Used Applications
-bindsym $mod+F2 exec firefox
-bindsym $mod+F3 exec thunar
-bindsym $mod+F4 exec qpdfview 
+bindsym $mod+F1 exec brave-browser
+bindsym $mod+F2 exec spotify 
+bindsym $mod+F3 exec discord 
+bindsym $mod+F4 exec code 
 
-bindsym $mod+F5 exec gvim 
-bindsym $mod+F6 exec code 
-bindsym $mod+F7 exec discord 
-bindsym $mod+F8 exec telegram
+bindsym $mod+F5 exec qpdfview 
+bindsym $mod+F6 exec thunar
 
 ## PrintScreen bindings
 bindsym Print exec --no-startup-id xfce4-screenshooter
@@ -68,9 +68,8 @@ bindsym $mod+v split v;exec notify-send 'tile vertically'
 bindsym $mod+f fullscreen toggle
 
 ## Change container layout (stacked, tabbed, toggle split)
-bindsym $mod+s layout stacking
-bindsym $mod+w layout tabbed
-bindsym $mod+e layout toggle split
+bindsym $mod+w layout tabbed;exec notify-send 'Tabbed Layout'
+bindsym $mod+e layout toggle split;exec notify-send 'Tilled Layout'
 
 ## Toggle tiling / floating
 bindsym $mod+Shift+space floating toggle
@@ -96,12 +95,12 @@ bindsym $mod+l exec --no-startup-id blurlock
 
 ## Workspaces
 
-set $ws1 1:I
-set $ws2 2:II
-set $ws3 3:III
-set $ws4 4:IV
-set $ws5 5:V
-set $ws6 6:VI
+set $ws1 1:
+set $ws2 2:
+set $ws3 3:
+set $ws4 4:
+set $ws5 5:
+set $ws6 6:
 set $ws7 7:VII
 set $ws8 8:VIII
 
@@ -221,24 +220,29 @@ mode "resize" {
 
 ## Redirections
 
-assign [class="discord"] $ws8
+for_window [class="Spotify"] move to workspace $ws2
+assign [class="discord"] $ws3
+assign [class="Code"] $ws4
+assign [class="qpdfview"] $ws5
 
 ## Switch to workspace with urgent window automatically
 for_window [urgent=latest] focus
 
 ## Hide borders
-hide_edge_borders none
+hide_edge_borders smart
 
 ## Title setting
 title_align center
 
 ## Font
-font pango: NotoSans 12
+font pango: NotoSans 11
 
 ## Configure border style <normal|1pixel|pixel xx|none|pixel>
-default_border pixel 3 
+default_border pixel 1 
 default_floating_border normal
 
+## Wallpaper
+exec --no-startup-id feh --bg-fill ~/Pictures/wallpapers/Mandel_zoom_00_mandelbrot_set.jpg
 
 ## Colors
 set $base00 #050608
@@ -263,53 +267,3 @@ client.focused              $base0D $base0D     $base00 $base01
 client.focused_inactive     $base02 $base02     $base03 $base01
 client.unfocused            $base01 $base02     $base03 $base01
 client.urgent               $base02 $base08     $base07 $base08
-
-
-# I3-Gaps Setting
-
-## Set inner/outer gaps
-gaps inner 15 
-gaps outer 0
-
-## Smart gaps (gaps used if only more than one container on the workspace)
-smart_gaps on 
-
-## Smart borders (draw borders around container only if it is not the only container on this workspace) 
-smart_borders on
-
-## Press $mod+Shift+g to enter the gap mode. Choose o or i for modifying outer/inner gaps. Press one of + / - (in-/decrement for current workspace) or 0 (remove gaps for current workspace). If you also press Shift with these keys, the change will be global for all workspaces.
-set $mode_gaps Gaps: (o) outer, (i) inner
-set $mode_gaps_outer Outer Gaps: +|-|0 (local), Shift + +|-|0 (global)
-set $mode_gaps_inner Inner Gaps: +|-|0 (local), Shift + +|-|0 (global)
-bindsym $mod+Shift+g mode "$mode_gaps"
-
-mode "$mode_gaps" {
-        bindsym o      mode "$mode_gaps_outer"
-        bindsym i      mode "$mode_gaps_inner"
-        bindsym Return mode "default"
-        bindsym Escape mode "default"
-}
-mode "$mode_gaps_inner" {
-        bindsym plus  gaps inner current plus 5
-        bindsym minus gaps inner current minus 5
-        bindsym 0     gaps inner current set 0
-
-        bindsym Shift+plus  gaps inner all plus 5
-        bindsym Shift+minus gaps inner all minus 5
-        bindsym Shift+0     gaps inner all set 0
-
-        bindsym Return mode "default"
-        bindsym Escape mode "default"
-}
-mode "$mode_gaps_outer" {
-        bindsym plus  gaps outer current plus 5
-        bindsym minus gaps outer current minus 5
-        bindsym 0     gaps outer current set 0
-
-        bindsym Shift+plus  gaps outer all plus 5
-        bindsym Shift+minus gaps outer all minus 5
-        bindsym Shift+0     gaps outer all set 0
-
-        bindsym Return mode "default"
-        bindsym Escape mode "default"
-}

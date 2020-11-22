@@ -1,0 +1,223 @@
+;==========================================================
+;
+;   ██████╗  ██████╗ ██╗  ██╗   ██╗██████╗  █████╗ ██████╗
+;   ██╔══██╗██╔═══██╗██║  ╚██╗ ██╔╝██╔══██╗██╔══██╗██╔══██╗
+;   ██████╔╝██║   ██║██║   ╚████╔╝ ██████╔╝███████║██████╔╝
+;   ██╔═══╝ ██║   ██║██║    ╚██╔╝  ██╔══██╗██╔══██║██╔══██╗
+;   ██║     ╚██████╔╝███████╗██║   ██████╔╝██║  ██║██║  ██║
+;   ╚═╝      ╚═════╝ ╚══════╝╚═╝   ╚═════╝ ╚═╝  ╚═╝╚═╝  ╚═╝
+;
+;==========================================================
+
+[colors]
+background = #31363B
+background-alt = #28292A
+
+foreground = #EFF0F1
+foreground-alt = #a3a5a6
+primary = #5EBBED
+secondary = #e60053
+alert = #bd2c40
+
+
+[bar/bottom-bar]
+
+fixed-center = true
+bottom = true
+
+width = 100%
+height = 20
+
+background = ${colors.background}
+foreground = ${colors.foreground}
+
+;overline-size = 1
+;underline-size = 1
+
+;border-bottom = 1
+;border-bottom-color = #333
+
+padding = 2
+
+module-margin = 2
+
+font-0 = xft:NotoSans:size=10;1
+font-1 = unifont:fontformat=truetype:size=11:antialias=false;0
+font-2 = FontAwesome:pixelsize=11;1
+font-3 = FontAwesome5Free:style=Solid:size=11;1
+font-4 = FontAwesome5Free:style=Regular:size=11;1
+font-5 = FontAwesome5Brands:style=Regular:size=11;1
+
+modules-left = pulseaudio backlight cpu memory temperature 
+modules-center = spotify
+
+locale = pt_BR.UTF-8
+
+tray-position = right 
+tray-padding = 5
+
+wm-restack = i3
+
+
+[bar/top-bar]
+
+fixed-center = true
+
+width = 100%
+height = 20
+
+background = ${colors.background}
+foreground = ${colors.foreground}
+
+overline-size = 1
+underline-size = 1
+
+;border-bottom = 1
+;border-bottom-color = #333
+
+border-size = 0
+border-color = ${colors.background}
+
+padding-left = 5
+
+module-margin = 2
+
+font-0 = xft:NotoSans:size=10;1
+font-1 = unifont:fontformat=truetype:size=11:antialias=false;0
+font-2 = FontAwesome:pixelsize=11;1
+font-3 = FontAwesome5Free:style=Solid:size=11;1
+font-4 = FontAwesome5Free:style=Regular:size=11;1
+font-5 = FontAwesome5Brands:style=Regular:size=11;1
+
+modules-left = i3 
+modules-center =  date
+
+locale = pt_BR.UTF-8
+
+wm-restack = i3
+
+scroll-up = i3wm-wsnext
+scroll-down = i3wm-wsprev
+
+[module/i3]
+type = internal/i3
+
+strip-wsnumbers = true
+
+enable-scrool = false
+
+; focused = Active workspace on focused monitor
+label-focused = %name%
+label-focused-foreground = ${colors.primary}
+;label-focused-background = ${colors.background-alt}
+;label-focused-underline= ${colors.primary}
+label-focused-padding = 5
+
+; unfocused = Inactive workspace on any monitor
+label-unfocused = %name% 
+label-unfocused-padding = 5
+
+; urgent = Workspace with urgency hint set
+label-urgent = %name%
+label-urgent-foreground = ${colors.alert}
+label-urgent-padding = 5
+
+[module/backlight]
+type = internal/xbacklight
+
+format = <ramp> <label> 
+label = %percentage%%
+format-foreground = #fb5607
+format-padding = 1
+
+ramp-0 = 
+ramp-1 = 
+
+[module/pulseaudio]
+type = internal/pulseaudio
+
+format-volume = <ramp-volume> <label-volume> 
+format-volume-foreground = #ffbe0b
+format-volume-padding = 1
+
+format-muted = <label-muted>
+format-muted-foreground = #ffbe0b 
+format-muted-padding = 1
+
+label-volume = %percentage%%
+
+label-muted = 
+	
+ramp-volume-0 = 
+ramp-volume-1 = 
+ramp-volume-2 = 
+
+click-right = pavucontrol &
+
+
+[module/cpu]
+type = internal/cpu
+
+interval = 2
+
+format =  <label>
+format-foreground = #ff006e
+format-padding = 1
+
+[module/memory]
+type = internal/memory
+
+interval = 2
+
+format =  <label> 
+
+label = %mb_free%
+
+format-foreground = #8338ec
+format-padding = 1
+
+[module/date]
+type = internal/date
+interval = 1
+
+format = <label> 
+;format-background = ${colors.background-alt} 
+;format-padding = 2
+
+date = %a, %d %b 
+
+time = %n %H:%M:%S
+
+label =  %date%   %time%
+
+[module/temperature]
+type = internal/temperature
+
+warn-temperature = 60
+
+format = <ramp> <label>
+format-foreground = #3a86ff
+format-padding = 1
+
+format-warn = <ramp> <label-warn>
+format-warn-background = ${colors.background-alt} 
+format-warn-foreground = ${colors.alert}
+format-warn-padding = 1
+
+label = %temperature-c%
+label-warn = %temperature-c%
+label-warn-foreground = ${colors.alert}
+
+ramp-0 = 
+ramp-1 = 
+ramp-2 = 
+ramp-3 = 
+ramp-4 = 
+
+[module/spotify]
+type = custom/script
+interval = 1
+format-prefix = " "
+format = <label>
+exec = python3 /home/eduardo/opt/polybar-spotify/spotify_status.py -t 99 -p ',' -f '{play_pause}  {song} - {artist} - {album}'
+format-foreground = #1db954
