@@ -1,3 +1,3 @@
 # My Desktop Environment
 
-<p align="center"><img src="blob/master/ricing.png" ></img></p>
+<p align="center"><img src="ricing.png" ></img></p>
