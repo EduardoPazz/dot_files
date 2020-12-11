@@ -22,6 +22,9 @@ alert = #bd2c40
 
 [bar/bottom-bar]
 
+monitor = VGA1
+monitor-fallback = LVDS1
+
 fixed-center = true
 bottom = true
 
@@ -50,6 +53,7 @@ font-5 = FontAwesome5Brands:style=Regular:size=11;1
 
 modules-left = pulseaudio backlight cpu memory temperature 
 modules-center = spotify
+modules-right = xkeyboard
 
 locale = pt_BR.UTF-8
 
@@ -60,6 +64,9 @@ wm-restack = i3
 
 
 [bar/top-bar]
+
+monitor = VGA1
+monitor-fallback = LVDS1
 
 fixed-center = true
 
@@ -104,18 +111,24 @@ type = internal/i3
 
 strip-wsnumbers = true
 
+index-sort = true
+
 enable-scrool = false
 
 ; focused = Active workspace on focused monitor
 label-focused = %name%
 label-focused-foreground = ${colors.primary}
-;label-focused-background = ${colors.background-alt}
-;label-focused-underline= ${colors.primary}
 label-focused-padding = 5
 
 ; unfocused = Inactive workspace on any monitor
 label-unfocused = %name% 
+label-unfocused-foreground = ${colors.foreground}
 label-unfocused-padding = 5
+
+; visible  = Inactive workspace on any monitor
+label-visible = %name% 
+label-visible-foreground = #F5B664
+label-visible-padding = 5
 
 ; urgent = Workspace with urgency hint set
 label-urgent = %name%
@@ -221,3 +234,10 @@ format-prefix = " "
 format = <label>
 exec = python3 /home/eduardo/opt/polybar-spotify/spotify_status.py -t 99 -p ',' -f '{play_pause}  {song} - {artist} - {album}'
 format-foreground = #1db954
+
+[module/xkeyboard]
+type = internal/xkeyboard
+
+format =   <label-indicator>
+format-foreground = #1db954
+format-spacing = 2              
