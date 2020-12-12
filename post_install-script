@@ -1,4 +1,4 @@
-#!usr/bin/bash
+#!/usr/bin/bash
 
 # Corrigir problema da rede
 # Instalar font-awesome
@@ -10,6 +10,7 @@ add-apt-repository ppa:kgilmer/speed-ricer
 
 apt update
 
-apt install -y fish aptitude vlc libreoffice firefox nodejs default-jdk vim-gtk3 polybar fonts-noto breeze dolphin network-manager feh gimp inkscape qpdfview pavucontrol pulseaudio ftp filezilla aria2 putty pulsemixer htop unzip unrar lxappearance git obs-studio youtube-dl i3-wm lightdm lightdm-gtk-greeter suckless-tools xbacklight xfce4-screenshooter xfce4-terminal xfce4-clipman 
+apt install -y fish aptitude vlc libreoffice firefox nodejs default-jdk vim-gtk3 polybar fonts-noto breeze dolphin network-manager feh gimp inkscape qpdfview pavucontrol pulseaudio ftp filezilla aria2 putty pulsemixer htop unzip unrar lxappearance git obs-studio youtube-dl i3-wm lightdm lightdm-gtk-greeter suckless-tools xbacklight xfce4-screenshooter xfce4-terminal xfce4-clipman breeze-gtk-theme  
 
-snap install telegram-desktop discord node beekeeper-studio code
+snap install telegram-desktop discord beekeeper-studio code
+snap install code --classic
