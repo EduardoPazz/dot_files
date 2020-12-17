@@ -22,8 +22,8 @@ alert = #bd2c40
 
 [bar/bottom-bar]
 
-monitor = VGA1
-monitor-fallback = LVDS1
+;monitor = VGA1
+;monitor-fallback = LVDS1
 
 fixed-center = true
 bottom = true
@@ -52,7 +52,7 @@ font-4 = FontAwesome5Free:style=Regular:size=11;1
 font-5 = FontAwesome5Brands:style=Regular:size=11;1
 
 modules-left = pulseaudio backlight cpu memory temperature 
-modules-center = spotify
+modules-center = spotify-prev spotify-play-pause spotify-next spotify
 modules-right = xkeyboard
 
 locale = pt_BR.UTF-8
@@ -65,8 +65,8 @@ wm-restack = i3
 
 [bar/top-bar]
 
-monitor = VGA1
-monitor-fallback = LVDS1
+;monitor = VGA1
+;monitor-fallback = LVDS1
 
 fixed-center = true
 
@@ -184,7 +184,7 @@ interval = 2
 
 format =  <label> 
 
-label = %mb_free%
+label = %mb_used% / %mb_free%
 
 format-foreground = #8338ec
 format-padding = 1
@@ -227,13 +227,7 @@ ramp-2 = 
 ramp-3 = 
 ramp-4 = 
 
-[module/spotify]
-type = custom/script
-interval = 1
-format-prefix = " "
-format = <label>
-exec = python3 /home/eduardo/opt/polybar-spotify/spotify_status.py -t 99 -p ',' -f '{play_pause}  {song} - {artist} - {album}'
-format-foreground = #1db954
+;exec = python3 /home/eduardo/opt/polybar-spotify/spotify_status.py -t 99 -p ',' -f '{play_pause}  {song} - {artist} - {album}'
 
 [module/xkeyboard]
 type = internal/xkeyboard
@@ -241,3 +235,32 @@ type = internal/xkeyboard
 format =   <label-indicator>
 format-foreground = #1db954
 format-spacing = 2              
+
+[module/spotify]
+type = custom/script
+interval = 1
+format-prefix = " "
+format = <label>
+exec = python3 /home/eduardo/.config/polybar/scripts/spotify_status.py -t 50 -p ',' -f '{play_pause}  {song} - {artist} - {album}'
+format-foreground = #1db954
+
+[module/spotify-prev]
+type = custom/script
+exec = echo ""
+format = <label>
+click-left = playerctl previous spotify
+format-foreground = #1db954
+
+[module/spotify-play-pause]
+type = custom/script
+exec = echo " / "
+format = <label>
+click-left = playerctl play-pause spotify
+format-foreground = #1db954
+
+[module/spotify-next]
+type = custom/script
+exec = echo ""
+format = <label>
+click-left = playerctl next spotify
+format-foreground = #1db954
