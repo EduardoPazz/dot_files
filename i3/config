@@ -4,10 +4,11 @@
 set $mod Mod4
 
 # Autostart applications
-exec --no-startup-id xfce4-clipman
 exec --no-startup-id pavucontrol
-exec --no-startup-id brave-browser
-exec_always --no-startup-id ~/.config/polybar/launch.sh 
+# exec --no-startup-id chromium
+# exec_always --no-startup-id ~/.config/polybar/launch.sh 
+exec_always --no-startup-id xfce4-panel --disable-wm-check
+exec_always --no-startup-id telegram-desktop
 
 # Bindings
 
@@ -24,7 +25,8 @@ bindsym $mod+Shift+q kill
 bindsym $mod+Ctrl+x --release exec --no-startup-id xkill
 
 ## Start dmenu
-bindsym $mod+d exec --no-startup-id dmenu_run -nb "#31363b" -sb "#5ebbed"
+#bindsym $mod+d exec --no-startup-id dmenu_run -nb "#31363b" -sb "#5ebbed"
+bindsym $mod+d exec --no-startup-id xfce4-appfinder
 
 ## Volume controls
 bindsym $mod+F10 exec "pulsemixer --change-volume +5; notify-send 'volume up'"
@@ -35,9 +37,7 @@ bindsym $mod+F12 exec "xbacklight -inc 10; notify-send 'brightness up'"
 bindsym $mod+F11 exec "xbacklight -dec 10; notify-send 'brightness down'"
 
 ## Frequently Used Applications
-bindsym $mod+F1 exec brave-browser
-bindsym $mod+F2 exec spotify 
-bindsym $mod+F3 exec discord 
+bindsym $mod+F1 exec chromium
 bindsym $mod+F4 exec code 
 
 bindsym $mod+F5 exec qpdfview 
@@ -95,12 +95,12 @@ bindsym $mod+l exec --no-startup-id blurlock
 
 ## Workspaces
 
-set $ws1 1:
-set $ws2 2:
-set $ws3 3:
-set $ws4 4:
-set $ws5 5:
-set $ws6 6:
+set $ws1 1:I
+set $ws2 2:II
+set $ws3 3:III
+set $ws4 4:IV
+set $ws5 5:V
+set $ws6 6:VI
 set $ws7 7:VII
 set $ws8 8:VIII
 
@@ -221,10 +221,9 @@ mode "$mode_monitor" {
 
 ## Redirections
 
-for_window [class="Spotify"] move to workspace $ws2
+for_window [class="Xfce4-appfinder"] floating enable; border none
 assign [class="discord"] $ws3
-assign [class="Code"] $ws4
-assign [class="qpdfview"] $ws5
+assign [class="jetbrains-idea-edu"] $ws4
 
 #workspace $ws2 output LVDS1
 #workspace $ws3 output LVDS1
@@ -247,8 +246,11 @@ font pango: NotoSans 11
 default_border pixel 1 
 default_floating_border normal
 
+## Focus on fullscreen
+popup_during_fullscreen leave_fullscreen
+
 ## Wallpaper
-exec --no-startup-id feh --bg-fill ~/Pictures/wallpapers/Mandel_zoom_00_mandelbrot_set.jpg
+exec --no-startup-id feh --bg-fill --randomize ~/Pictures/wallpapers/
 
 ## Colors
 set $base00 #050608
