@@ -21,7 +21,8 @@ set nobackup
 set undodir=~/.vim/undodir
 set undofile
 
-colorscheme slate
+set background=dark
+colorscheme solarized
 
 " Vim-Plug Section
 

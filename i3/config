@@ -8,7 +8,7 @@ exec --no-startup-id pavucontrol
 # exec --no-startup-id chromium
 # exec_always --no-startup-id ~/.config/polybar/launch.sh 
 exec_always --no-startup-id xfce4-panel --disable-wm-check
-exec_always --no-startup-id telegram-desktop
+# exec_always --no-startup-id telegram-desktop
 
 # Bindings
 
@@ -219,6 +219,9 @@ mode "$mode_monitor" {
 
 # Window Management Settings
 
+## Compositor
+exec_always --no-startup-id picom -bCcfD 5 --shadow-red .078 --shadow-green .31 --shadow-blue .64 --shadow-exclude "!focused"
+
 ## Redirections
 
 for_window [class="Xfce4-appfinder"] floating enable; border none
@@ -252,26 +255,16 @@ popup_during_fullscreen leave_fullscreen
 ## Wallpaper
 exec --no-startup-id feh --bg-fill --randomize ~/Pictures/wallpapers/
 
-## Colors
-set $base00 #050608
-set $base01 #1a1b1c
-set $base02 #28292a
-set $base03 #474849
-set $base04 #a3a5a6
-set $base05 #c1c3c4
-set $base06 #cfd1d2
-set $base07 #dddfe0
-set $base08 #b53b50
-set $base09 #ea770d
-set $base0A #c9d364
-set $base0B #06ea61
-set $base0C #42fff9
-set $base0D #5EBBED
-set $base0E #ea5ce2
-set $base0F #cd6320
+# Colors
 
-## Window Colours           border  background  text    indicator
-client.focused              $base0D $base0D     $base00 $base01
-client.focused_inactive     $base02 $base02     $base03 $base01
-client.unfocused            $base01 $base02     $base03 $base01
-client.urgent               $base02 $base08     $base07 $base08
+## class                 border  backgr. text    indicator child_border
+client.focused          #15539e #15539e #ffffff #ff0000   #15539e
+client.focused_inactive #353535 #303030 #586e75 #ff0000   #353535
+client.unfocused        #353535 #303030 #586e75 #ff0000   #353535
+client.urgent           #2f343a #900000 #ffffff #900000   #900000
+client.placeholder      #000000 #0c0c0c #ffffff #000000   #0c0c0c
+
+client.background       #ffffff
+
+# Gaps
+gaps inner 10
