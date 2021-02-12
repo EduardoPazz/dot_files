@@ -220,7 +220,7 @@ mode "$mode_monitor" {
 # Window Management Settings
 
 ## Compositor
-exec_always --no-startup-id picom -bCcfD 5 --shadow-red .078 --shadow-green .31 --shadow-blue .64 --shadow-exclude "!focused"
+exec_always --no-startup-id picom -Ccf -l -17 -t -17 -D 5 --shadow-red .078 --shadow-green .31 --shadow-blue .64 --shadow-exclude "!focused" --sw-opti
 
 ## Redirections
 
