@@ -1,0 +1,7 @@
+input * {
+    xkb_layout "br"
+    xkb_variant ""
+    xkb_options ""
+}
+
+input 6700:11555:USB_USB_Keyboard xkb_model "pc105"
