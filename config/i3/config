@@ -263,7 +263,7 @@ bindsym $mod+0 mode "$mode_system"
 for_window [urgent=latest] focus
 
 ## Configure border style <normal|1pixel|pixel xx|none|pixel>
-default_border pixel 1 
+default_border pixel 2 
 default_floating_border normal
 
 ## Hide borders
@@ -273,7 +273,7 @@ hide_edge_borders smart
 title_align center
 
 ## Font
-font pango: NotoSans 9
+font pango: NotoSans 10
 
 ## Focus on fullscreen
 popup_during_fullscreen leave_fullscreen
@@ -287,18 +287,18 @@ smart_borders no_gaps
 # Colors
 #
 
-set $bg #353C4A
+set $bg #2e3440
 set $fg #D8DEE9 
-set $accent #4C5763
+set $accent #8fbcbb
 set $blue #81A1C1
 set $red #BF616A
 
 ## class                 border  backgr. text    indicator child_border
-client.focused          $accent $accent #ffffff $red  	$red 
-client.focused_inactive $bg 	$bg 	$fg 	$red  $blue 
-client.unfocused        $bg 	$bg 	$fg 	$red  $blue 
-client.urgent           $bg 	$bg 	$fg 	$red  $blue 
-client.placeholder      $bg 	$bg 	$fg 	$red  $blue 
+client.focused          $accent $accent $bg     $red  	$accent 
+client.focused_inactive $bg 	$bg 	$fg 	$red  $bg 
+client.unfocused        $bg 	$bg 	$fg 	$red  $bg 
+client.urgent           $bg 	$bg 	$fg 	$red  $bg 
+client.placeholder      $bg 	$bg 	$fg 	$red  $bg 
 
 client.background       #ffffff
 

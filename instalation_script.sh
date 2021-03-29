@@ -88,6 +88,7 @@ pacman -S --needed \
     grub-customizer \
     xorg \
     lightdm \
+    docker-compose \
     sudo \
     htop \
     neovim \
