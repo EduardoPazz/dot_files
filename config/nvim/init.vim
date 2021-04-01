@@ -13,7 +13,6 @@ set smartindent
 " Search options
 set ignorecase
 set smartcase
-set smartcase
 
 " Performance options
 set lazyredraw
