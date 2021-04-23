@@ -2,21 +2,24 @@
 
 # Variables declarations
 TERMINAL_COMMAND="alacritty --command"
-EDITOR="nvim"
-declare -A CONFIG_FILES
 
-# Populate the config_files options
-CONFIG_FILES[config]="${HOME}dot_files/scripts/config"
-CONFIG_FILES[alacritty]="$HOME.config/alacritty/alacritty.yml"
-CONFIG_FILES[i3]="$HOME.config/i3/config"
-CONFIG_FILES[neovim]="$HOME.config/nvim/init.vim"
+declare -A PATH_CONFIG
 
-# It prints per line the indexes of $CONFIG_FILES and pipes them to dmenu
+PATH_CONFIG[config]=$PATH_CONFIG
+PATH_CONFIG[alacritty]=$PATH_ALACRITTY
+PATH_CONFIG[i3]=$PATH_I3
+PATH_CONFIG[neovim]=$PATH_NEOVIM
+PATH_CONFIG[picom]=$PATH_PICOM
+PATH_CONFIG[fish]=$PATH_FISH
+PATH_CONFIG[vars]=$PATH_VARS
+
+
+# It prints per line the indexes of $PATH_CONFIG
 # to finally gets a $SELECTION
-SELECTION=$(printf '%s\n' "${!CONFIG_FILES[@]}" | dmenu -fn 'Noto Sans' -nb '#353c4a' -sb '#43415e')
+SELECTION=$(printf '%s\n' "${!PATH_CONFIG[@]}" | dmenu -fn 'Noto Sans' -nb '#353535' -sb '#15539e' )
 
 # Launch
 if [[ -n $SELECTION ]]; then
-    $TERMINAL_COMMAND $EDITOR ${CONFIG_FILES[$SELECTION]}
+    $TERMINAL_COMMAND $EDITOR ${PATH_CONFIG[$SELECTION]}
 fi
 

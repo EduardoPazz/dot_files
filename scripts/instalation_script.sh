@@ -62,6 +62,8 @@ pacman -S --needed \
     lxappearance \
     ristretoo \
     telegram-desktop \
+    gimp \
+    vlc \
 
     # Command-line utilites
     $SHELL \
@@ -75,6 +77,7 @@ pacman -S --needed \
     # Theming
     breeze-icons \
     grub-theme-vimix \
+    starship \
 
     # Core utils
     base-devel \

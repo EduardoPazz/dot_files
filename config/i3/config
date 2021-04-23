@@ -9,14 +9,8 @@ set $mod Mod4
 set $term alacritty
 
 # Application launcher
-set $menu dmenu_run -fn 'Noto Sans' -nb '#353c4a' -sb '#43415e' 
+set $menu dmenu_run -fn 'Noto Sans' -nb '#353535' -sb '#15539e' 
 
-#
-# Output configuration
-#
-
-# Wallpaper 
-exec --no-startup-id feh --bg-fill /home/eduardo/Pictures/wallpapers/jon-snow.jpg 
 
 
 ### Key bindings
@@ -24,10 +18,13 @@ exec --no-startup-id feh --bg-fill /home/eduardo/Pictures/wallpapers/jon-snow.jp
 # Basics:
 #
     # Start a terminal
-    bindsym $mod+Return exec $term
+    bindsym $mod+Return exec --no-startup-id $term
 
     # Kill focused window
     bindsym $mod+Shift+q kill
+    
+    # xkill
+    bindsym --release $mod+Ctrl+x exec --no-startup-id xkill
 
     # Start your launcher
     bindsym $mod+d exec --no-startup-id $menu
@@ -50,9 +47,9 @@ exec --no-startup-id feh --bg-fill /home/eduardo/Pictures/wallpapers/jon-snow.jp
     bindsym Print exec --no-startup-id "flameshot gui"
 
     # Applications
-    bindsym $mod+F1 exec google-chrome-stable
-    bindsym $mod+F7 exec telegram-desktop
-    bindsym $mod+F8 exec discord
+    bindsym $mod+F1 exec --no-startup-id google-chrome-stable
+    bindsym $mod+F7 exec --no-startup-id telegram-desktop
+    bindsym $mod+F8 exec --no-startup-id discord
 
 #
 # Moving around:
@@ -153,7 +150,7 @@ bindsym $mod+Ctrl+Left workspace prev
 # Redirections:
 #
 
-assign [class="telegram-desktop"] 7
+assign [class="TelegramDesktop"] 7
 assign [class="discord"] 8
 
 # Layout stuff:
@@ -201,10 +198,10 @@ assign [class="discord"] 8
 
 mode "resize" {
     
-    bindsym Left resize shrink width 10px
-    bindsym Down resize grow height 10px
-    bindsym Up resize shrink height 10px
-    bindsym Right resize grow width 10px
+    bindsym Left resize shrink width 20px
+    bindsym Down resize grow height 20px
+    bindsym Up resize shrink height 20px
+    bindsym Right resize grow width 20px
 
     # Return to default mode
     bindsym Return mode "default"
@@ -232,7 +229,8 @@ mode "$mode_system" {
     bindsym Escape mode "default"
 }
 
-bindsym $mod+0 mode "$mode_system"
+#bindsym $mod+0 mode "$mode_system"
+bindsym $mod+0 exec --no-startup-id exit-dmenuscript
 
 ##
 ## Monitor
@@ -273,7 +271,7 @@ hide_edge_borders smart
 title_align center
 
 ## Font
-font pango: NotoSans 10
+font pango: NotoSans 11
 
 ## Focus on fullscreen
 popup_during_fullscreen leave_fullscreen
@@ -287,14 +285,13 @@ smart_borders no_gaps
 # Colors
 #
 
-set $bg #2e3440
-set $fg #D8DEE9 
-set $accent #8fbcbb
-set $blue #81A1C1
-set $red #BF616A
+set $bg #353535
+set $fg #eeeeec 
+set $accent #15539e
+set $red #ff5370
 
 ## class                 border  backgr. text    indicator child_border
-client.focused          $accent $accent $bg     $red  	$accent 
+client.focused          $accent $accent $fg     $red  	$accent 
 client.focused_inactive $bg 	$bg 	$fg 	$red  $bg 
 client.unfocused        $bg 	$bg 	$fg 	$red  $bg 
 client.urgent           $bg 	$bg 	$fg 	$red  $bg 
@@ -308,6 +305,7 @@ client.background       #ffffff
 
 exec --no-startup-id xfce4-panel -d
 exec --no-startup-id polkit-dumb-agent
-exec --no-startup-id flameshot 
 exec --no-startup-id picom
 exec --no-startup-id setxkbmap br
+exec --no-startup-id numlockx on
+exec --no-startup-id updatebg
