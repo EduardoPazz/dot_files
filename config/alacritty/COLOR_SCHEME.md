@@ -1,0 +1,1 @@
+**You must get a colorscheme .yml file and update the `import` section in `alacritty.yml`**

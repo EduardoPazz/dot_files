@@ -1,0 +1,1 @@
+**Don't forget to set dracula theme: https://draculatheme.com/i3**

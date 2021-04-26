@@ -27,15 +27,14 @@ if [ -d "$HOME/.local/bin" ] ; then
 fi
 
 
-export PATH_SCRIPTS="$HOME/dot_files/scripts/"
-export QT_STYLE_OVERRIDE="kvantum"
 export EDITOR="nvim"
+export QT_STYLE_OVERRIDE=kvantum
 
-declare -A PATH_CONFIG
-
-PATH_CONFIG[config]="$PATH_SCRIPTS/config"
-PATH_CONFIG[alacritty]="$HOME.config/alacritty/alacritty.yml"
-PATH_CONFIG[i3]="$HOME.config/i3/config"
-PATH_CONFIG[neovim]="$HOME.config/nvim/init.vim"
-PATH_CONFIG[picom]="$HOME.config/picom/picom.conf"
-
+export PATH_SCRIPTS="$HOME/dot_files/scripts/"
+export PATH_CONFIG="$PATH_SCRIPTS/config-script"
+export PATH_ALACRITTY="$HOME.config/alacritty/alacritty.yml"
+export PATH_I3="$HOME.config/i3/config"
+export PATH_NEOVIM="$HOME.config/nvim/init.vim"
+export PATH_PICOM="$HOME.config/picom/picom.conf"
+export PATH_FISH="$HOME.config/fish/config.fish"
+export PATH_PROFILE="$HOME.profile"

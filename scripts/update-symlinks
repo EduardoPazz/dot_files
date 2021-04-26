@@ -1,4 +1,3 @@
 #!/usr/bin/bash
 
 ln --force --symbolic $PATH_SCRIPTS/* $HOME/.local/bin/
-

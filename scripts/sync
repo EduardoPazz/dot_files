@@ -1,0 +1,14 @@
+#!/usr/bin/bash
+
+# When 'rsync'ing a whole directory, the target must be the parent directory
+
+rsync -a $HOME/.profile $HOME/dot_files/profile
+
+rsync -a $HOME/.config/starship.toml $HOME/dot_files/config/starship.toml
+
+rsync -a $HOME/.config/alacritty/alacritty.yml $HOME/dot_files/config/alacritty/alacritty.yml
+rsync -a $HOME/.config/fish/config.fish $HOME/dot_files/config/fish/config.fish
+rsync -a $HOME/.config/i3/config $HOME/dot_files/config/i3/config
+rsync -a $HOME/.config/nvim/init.vim $HOME/dot_files/config/nvim/init.vim
+rsync -a $HOME/.config/sway $HOME/dot_files/config
+rsync -a $HOME/.config/waybar $HOME/dot_files/config

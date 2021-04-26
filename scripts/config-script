@@ -11,12 +11,12 @@ PATH_CONFIG[i3]=$PATH_I3
 PATH_CONFIG[neovim]=$PATH_NEOVIM
 PATH_CONFIG[picom]=$PATH_PICOM
 PATH_CONFIG[fish]=$PATH_FISH
-PATH_CONFIG[vars]=$PATH_VARS
+PATH_CONFIG[profile]=$PATH_PROFILE
 
 
 # It prints per line the indexes of $PATH_CONFIG
 # to finally gets a $SELECTION
-SELECTION=$(printf '%s\n' "${!PATH_CONFIG[@]}" | dmenu -fn 'Noto Sans' -nb '#353535' -sb '#15539e' )
+SELECTION=$(printf '%s\n' "${!PATH_CONFIG[@]}" | dmenu -fn 'Noto Sans' -nf '#F8F8F2' -nb '#282A36' -sb '#6272A4' -sf '#F8F8F2' )
 
 # Launch
 if [[ -n $SELECTION ]]; then

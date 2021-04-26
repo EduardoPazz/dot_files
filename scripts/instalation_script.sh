@@ -1,12 +1,19 @@
 #!/usr/bin/bash
 
 # ----------------------Configuring system----------------
+echo "Starting to configure system"
+
+
 # Time
+echo "Configuring time..."
+
 timedatectl set-ntp true
 timedatectl set-timezone America/Sao_Paulo
 hwclock --systohc
 
 # Localization/Language
+echo "Configuring locale..."
+
 echo 'pt_BR.UTF-8
 en_US.UTF-8' >> /etc/locale.gen
 
@@ -18,6 +25,7 @@ LC_MESSAGES=en_US.UTF-8' > /etc/locale.conf
 echo 'KEYMAP=br-abnt2' > /etc/vconsole.conf
 
 # Network configuration
+echo "Configuring network..."
 HOSTNAME=E1-571-arch
 echo $HOSTNAME > /etc/hostname
 
@@ -26,6 +34,7 @@ echo "127.0.0.1	    localhost
 127.0.0.1	$HOSTNAME.localdomain $HOSTNAME" > 
 
 # Root password
+echo "Configuring root password:"
 passwd
 
 
@@ -33,6 +42,7 @@ passwd
 
 
 # ----------------------Installing programs----------------
+echo "Installing programs. Pay attention"
 
 # 'Variable' programs, in the sense that they may be changed
 ## Graphical applications
@@ -111,11 +121,14 @@ pacman -S --needed \
 # ---------------------------------------------------------
 
 # ----------------------GRUB-------------------------------
+echo "Configuring GRUB..."
+
 grub-install --target=x86_64-efi --efi-directory=/boot/efi/ --bootloader-id=GRUB
 grub-mkconfig -o /boot/grub/grub.cfg
 # ---------------------------------------------------------
 
 # ----------------------User-------------------------------
 # TODO: add conditional to test whether the home directory exists
-useradd -Um -s /usr/bin/$SHELL -p $0 eduardo
+echo "Adding user..."
+useradd -Um -s /usr/bin/$SHELL -p $1 eduardo
 # ---------------------------------------------------------

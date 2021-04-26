@@ -13,7 +13,7 @@ OPTION[poweroff]='systemctl poweroff'
 
 # It prints per line the indexes of $OPTION
 # to finally gets a $SELECTION
-SELECTION=$(printf '%s\n' "${!OPTION[@]}" | dmenu -fn 'Noto Sans' -nb '#353535' -sb '#15539e' )
+SELECTION=$(printf '%s\n' "${!OPTION[@]}" | dmenu -fn 'Noto Sans' -nf '#F8F8F2' -nb '#282A36' -sb '#6272A4' -sf '#F8F8F2' )
 
 # Launch
 if [[ -n $SELECTION ]]; then
