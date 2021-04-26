@@ -12,3 +12,4 @@ rsync -a $HOME/.config/i3/config $HOME/dot_files/config/i3/config
 rsync -a $HOME/.config/nvim/init.vim $HOME/dot_files/config/nvim/init.vim
 rsync -a $HOME/.config/sway $HOME/dot_files/config
 rsync -a $HOME/.config/waybar $HOME/dot_files/config
+rsync -a $HOME/.config/dunst/dunstrc $HOME/dot_files/config/dunst/dunstrc
