@@ -1,0 +1,18 @@
+#!/usr/bin/bash
+
+# Variables declarations
+declare -A COMMAND
+
+COMMAND[off]='xrandr --output LVDS-1 --off'
+COMMAND[on]='xrandr --output LVDS-1 --auto --right-of VGA-1'
+
+
+# It prints per line the indexes of $COMMAND
+# to finally gets a $SELECTION
+SELECTION=$(printf '%s\n' "${!COMMAND[@]}" | dmenu -fn 'Noto Sans' -nf '#F8F8F2' -nb '#282A36' -sb '#6272A4' -sf '#F8F8F2' -p 'LVDS-1 state:')
+
+# Execute
+if [[ -n $SELECTION ]]; then
+    ${COMMAND[$SELECTION]}
+fi
+
