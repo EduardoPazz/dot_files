@@ -1,3 +1,7 @@
 #!/usr/bin/bash
 
-feh --bg-fill --randomize --filelist $HOME/dot_files/bg-list
+RANDOM_WALLPAPER=$(shuf -n 1 $HOME/dot_files/bg-list)
+
+# feh --bg-fill $RANDOM_WALLPAPER
+# notify-send "Random Wallpaper set:" "$RANDOM_WALLPAPER"
+feh --bg-fill ~/Pictures/wallpapers/dracula.png

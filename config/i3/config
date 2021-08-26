@@ -48,7 +48,9 @@ set $menu dmenu_run -fn 'Noto Sans' -nf '#F8F8F2' -nb '#282A36' -sb '#6272A4' -s
 
     # Applications
     bindsym $mod+F1 exec --no-startup-id google-chrome-stable
-    bindsym $mod+F6 exec --no-startup-id thunar
+    bindsym $mod+F2 exec --no-startup-id stremio
+    bindsym $mod+F3 exec --no-startup-id qpdfview
+    bindsym $mod+F4 exec --no-startup-id thunar
     bindsym $mod+F7 exec --no-startup-id telegram-desktop
     bindsym $mod+F8 exec --no-startup-id discord
 
@@ -145,13 +147,14 @@ bindsym $mod+Shift+Mod2+KP_8 move container to workspace $ws8; workspace $ws8
 bindsym $mod+Ctrl+Right workspace next
 bindsym $mod+Ctrl+Left workspace prev
 
-
+## Workspaces and screens
+workspace $ws4 output LVDS1
 
 #
 # Redirections:
 #
 
-assign [class="TelegramDesktop"] 7
+assign [class="TelegramDesktop"] 8
 assign [class="discord"] 8
 
 # Layout stuff:
@@ -238,22 +241,22 @@ bindsym $mod+l exec --no-startup-id systemctl suspend
 ## Monitor
 ##
 
-#exec xrandr --output LVDS1 --off
-#exec xrandr --output VGA1 --primary --auto
-#
-#set $mode_monitor LVDS1: f (turn off) | n (turn on)
-#
-#mode "$mode_monitor" {
-#
-#        bindsym f exec xrandr --output LVDS1 --off
-#        bindsym n exec xrandr --output LVDS1 --auto --right-of VGA1
-#
-#        # exit resize mode: Enter or Escape
-#        bindsym Return mode "default"
-#        bindsym Escape mode "default"
-#}
-#
-#bindsym $mod+m mode "$mode_monitor"
+exec --no-startup-id $PATH_SCRIPTS/monitor-script
+# workspace $ws1
+
+set $mode_monitor LVDS1: f (turn off) | n (turn on)
+
+mode "$mode_monitor" {
+
+        bindsym f exec --no-startup-id xrandr --output LVDS-1 --off; mode "default"
+        bindsym n exec --no-startup-id xrandr --output LVDS-1 --auto --left-of VGA-1; mode "default"
+
+        # exit resize mode: Enter or Escape
+        bindsym Return mode "default"
+        bindsym Escape mode "default"
+}
+
+bindsym $mod+m mode "$mode_monitor"
 
 #
 # General settings
@@ -301,10 +304,11 @@ client.background       #F8F8F2
 #
 
 exec --no-startup-id xfce4-panel -d
-exec --no-startup-id polkit-dumb-agent
-exec --no-startup-id picom
+# exec --no-startup-id polkit-dumb-agent
+# exec --no-startup-id picom
 exec --no-startup-id setxkbmap br
 exec --no-startup-id numlockx on
+exec --no-startup-id /usr/lib/xfce4/notifyd/xfce4-notifyd
 exec --no-startup-id update-bg
 
 

@@ -26,6 +26,11 @@ if [ -d "$HOME/.local/bin" ] ; then
     PATH="$HOME/.local/bin:$PATH"
 fi
 
+# For Node packages 
+if [ -d "$HOME/.npm-global/bin" ] ; then
+    export PATH="$HOME/.npm-global/bin:$PATH"
+fi
+
 
 export EDITOR="nvim"
 export QT_STYLE_OVERRIDE=kvantum
