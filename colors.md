@@ -1,1 +1,0 @@
-- **background**: `#353c4a`
