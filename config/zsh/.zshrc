@@ -11,12 +11,7 @@ export ZSH="$HOME/.oh-my-zsh"
 #######
 # Aliases
 #######
-alias ga='git add'
 alias gs='git status'
-alias gc='git commit'
-alias gco='git checkout'
-alias gpp='git pull --prune'
-alias gb='git branch'
 alias gl='git log --oneline --graph'
 alias cp='cp -vi'
 alias mv='mv -vi'
@@ -28,16 +23,25 @@ alias el='exa -Fhl'
 alias eal='exa -Fhal'
 alias rg='rg -S'
 alias v='nvim'
-alias find='fd'
-alias maven_source="$HOME/scripts/maven_source.py"
-alias vaicarai='rm -rf node_modules/ package-lock.json && npm i'
-alias gcb='./gradlew clean build'
 
 #######
 # Plugins
 #######
 
-plugins=(asdf zsh-autosuggestions history-substring-search zsh-syntax-highlighting)
+plugins=(
+	aliases
+	asdf
+	brew
+	colored-man-pages
+	cp
+	dirhistory
+	gh
+	git
+	history-substring-search
+	vi-mode
+	zsh-autosuggestions
+	zsh-syntax-highlighting
+)
 
 #######
 # Setups
