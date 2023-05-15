@@ -12,7 +12,6 @@ export ZSH="$HOME/.oh-my-zsh"
 # Aliases
 #######
 alias gs='git status'
-alias gl='git log --oneline --graph'
 alias cp='cp -vi'
 alias mv='mv -vi'
 alias rm='rm -vi'
@@ -23,6 +22,7 @@ alias el='exa -Fhl'
 alias eal='exa -Fhal'
 alias rg='rg -S'
 alias v='nvim'
+alias gw='./gradlew'
 
 #######
 # Plugins
