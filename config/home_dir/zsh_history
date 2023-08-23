@@ -1,0 +1,185 @@
+: 1692799495:0;brew
+: 1692799495:0;xcode-select â€ƒ³install
+: 1692799495:0;xcode-select â€ƒ³-install
+: 1692799495:0;xcode-select --install
+: 1692799495:0;git
+: 1692799495:0;/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+: 1692799495:0;    (echo; echo 'eval "$(/opt/homebrew/bin/brew shellenv)"') >> /Users/eduardopaz/.zprofile\
+    eval "$(/opt/homebrew/bin/brew shellenv)"
+: 1692799495:0;brew
+: 1692799495:0;brew install telegram
+: 1692799495:0;exit
+: 1692799495:0;brew install amethyst
+: 1692799495:0;brew install anki authy brave-browser discord jetbrains-toolbox notion postman raycast spotify steam visual-studio-code whatsapp
+: 1692799495:0;exit
+: 1692799495:0;brew asdf bat exa gradle neovim starship tldr
+: 1692799495:0;brew install asdf bat exa gradle neovim starship tldr
+: 1692799495:0;exit
+: 1692799495:0;ea
+: 1692799495:0;source .zshrc
+: 1692799495:0;ea
+: 1692799495:0;v 
+: 1692799495:0;nvim .zshrc
+: 1692799495:0;rm .zshrc
+: 1692799495:0;mv .zshrc.pre-oh-my-zsh .zshrc
+: 1692799495:0;ea
+: 1692799495:0;exa
+: 1692799495:0;exa -a
+: 1692799495:0;source .zshrc
+: 1692799495:0;asdf plugin install java
+: 1692799495:0;tldr asdf
+: 1692799495:0;asdf plugin add java
+: 1692799495:0;source .zshrc
+: 1692799495:0;asdf list-all java
+: 1692799495:0;asdf list-all java | less
+: 1692799495:0;asdf install java temurin-17.0.8+7
+: 1692799495:0;pbpaste > .tool-versions
+: 1692799495:0;source .zshrc
+: 1692799495:0;git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+: 1692799495:0;git clone https://github.com/zsh-users/zsh-syntax-highlighting.git\
+echo "source ${(q-)PWD}/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh" >> ${ZDOTDIR:-$HOME}/.zshrc
+: 1692799495:0;source .zshrc
+: 1692799495:0;e
+: 1692799495:0;e zsh-syntax-highlighting
+: 1692799495:0;v .zshrc
+: 1692799495:0;rm -rf zsh-syntax-highlighting
+: 1692799495:0;brew install zsh-syntax-highlighting
+: 1692799495:0;pbpaste >> .zshrc
+: 1692799495:0;source .zshrc
+: 1692799495:0;v .zshrc
+: 1692799495:0;cd dot_files
+: 1692799495:0;gs
+: 1692799495:0;git diff config/
+: 1692799495:0;gc
+: 1692799495:0;ga .
+: 1692799495:0;gs
+: 1692799495:0;gc
+: 1692799495:0;gs
+: 1692799495:0;gp
+: 1692799495:0;cd
+: 1692799495:0;gs
+: 1692799495:0;asc
+: 1692799495:0;brew install gh
+: 1692799495:0;gh repo clone EduardoPazz/dot_files
+: 1692799495:0;gh auth login
+: 1692799495:0;gh auth login
+: 1692799495:0;gh repo clone EduardoPazz/dot_files
+: 1692799495:0;cd dot_files
+: 1692799495:0;e
+: 1692799495:0;ls
+: 1692799495:0;ls config
+: 1692799495:0;cd
+: 1692799495:0;cd .config
+: 1692799495:0;ln -s ~/dot_files/config/nvim .
+: 1692799495:0;ls
+: 1692799495:0;cd
+: 1692799495:0;cd dot_files
+: 1692799495:0;gh
+: 1692799495:0;gs
+: 1692799495:0;git status
+: 1692799495:0;git pull
+: 1692799495:0;cd
+: 1692799495:0;ls -a
+: 1692799495:0;ln -s dot_files/config/home_dir/gitconfig .gitconfig
+: 1692799495:0;ls -a
+: 1692799495:0;exa
+: 1692799495:0;ln -s dot_files/config/home_dir/zshrc .zshrc
+: 1692799495:0;source .zshrc
+: 1692799495:0;sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"\
+\
+
+: 1692799230:0;brew install whatsapp
+: 1692799495:0;exit
+: 1692800773:0;mkdir -p Dev/5a
+: 1692800778:0;cd Dev/5a
+: 1692800779:0;e
+: 1692800782:0;gh repo clone quintoandar/feed-service
+: 1692801025:0;cd ..
+: 1692801025:0;e
+: 1692801033:0;rm -rf 5a/*
+: 1692801039:0;ea 5a
+: 1692801047:0;rm -rf 5a
+: 1692801048:0;e
+: 1692801051:0;mkdir 5a
+: 1692801215:0;asdf install java temurin-11.0.18+10\
+
+: 1692801238:0;qli env set forno
+: 1692801246:0;qli login
+: 1692801262:0;mkdir ~/.qli
+: 1692801263:0;qli login
+: 1692801526:0;el /usr/local/bin
+: 1692801593:0;whoami
+: 1692801615:0;sudo chown eduardopaz /usr/local/bin/qli
+: 1692801659:0;sudo vim /etc/sudoers
+: 1692801713:0;sudo vim /etc/pam.d/sudo
+: 1692801737:0;qli login
+: 1692801848:0;sudo chown eduardopaz /tmp/qli
+: 1692801851:0;qli login
+: 1692801907:0;el /usr/local/bin
+: 1692801929:0;el /tmp/qli
+: 1692801946:0;sudo qli login
+: 1692802026:0;qli env set forno
+: 1692802052:0;qli login
+: 1692802072:0;qli env set forno
+: 1692802088:0;qli database get forno-readonly-feed-service --ttl=48h
+: 1692802207:0;gco forno
+: 1692802230:0;gl origin feat/DN-1199-api-trigger-feed-processing
+: 1692802235:0;gs
+: 1692802237:0;exit
+: 1692810389:0;gh repo clone EduardoPazz/wallpapers
+: 1692810672:0;exit
+: 1692812277:0;gco -
+: 1692812282:0;gco feat/DN-1199-api-trigger-feed-processing
+: 1692812287:0;glom
+: 1692812298:0;gp
+: 1692814675:0;qli env set prod
+: 1692814686:0;qli database get prod-readonly-feed-service --ttl=48h
+: 1692815579:0;gco master
+: 1692815615:0;gcb feat/DN-1201-unify-get-feed-endpoints
+: 1692815926:0;gw build
+: 1692831040:0;brew install ffmpeg
+: 1692831216:0;convert
+: 1692831222:0;ls 
+: 1692831309:0;git clone https://github.com/zsh-users/zsh-syntax-highlighting.git\
+\
+${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+: 1692831318:0;cd .oh-my-zsh
+: 1692831319:0;e
+: 1692831326:0;cd custom
+: 1692831327:0;e
+: 1692831341:0;git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+: 1692831364:0;brew uninstall zsh-syntax-highlighting
+: 1692831373:0;cd
+: 1692831375:0;v .zshrc
+: 1692831391:0;source .zshrc
+: 1692831413:0;cd dot_files
+: 1692831420:0;gs
+: 1692831449:0;ga .
+: 1692831452:0;gc
+: 1692831479:0;gs
+: 1692831480:0;gp
+: 1692831492:0;asc
+: 1692831494:0;cd
+: 1692831512:0;e -T2 dot_files
+: 1692831515:0;e -T 2 dot_files
+: 1692831544:0;ea
+: 1692831563:0;b .zprofile
+: 1692831583:0;b .zsh_history
+: 1692831629:0;mv .zsh_history dot_files/config/home_dir/zsh_history
+: 1692831699:0;eal
+: 1692831711:0;cd dot_files
+: 1692831713:0;gs
+: 1692831718:0;ga .
+: 1692831719:0;gs
+: 1692831761:0;als
+: 1692831924:0;tldr brew upgrade
+: 1692831936:0;brew upgrade --help
+: 1692831941:0;brew upgrade --help | less
+: 1692831960:0;bubu
+: 1692832028:0;brew outdated --help | less
+: 1692832055:0;als | less
+: 1692832701:0;cd
+: 1692832705:0;v .zshrc
+: 1692832767:0;cd dot_files
+: 1692832771:0;gs
+: 1692832778:0;ga .

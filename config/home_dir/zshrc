@@ -39,6 +39,7 @@ plugins=(
 	dirhistory
 	gh
 	git
+	gradle
 	history-substring-search
 	vi-mode
 	zsh-autosuggestions
