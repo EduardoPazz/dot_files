@@ -9,6 +9,7 @@ export ZSH="$HOME/.oh-my-zsh"
 #######
 # Aliases
 #######
+alias python=python3
 alias gs='git status'
 alias cp='cp -vi'
 alias mv='mv -vi'
@@ -20,7 +21,7 @@ alias el='exa -Fhl'
 alias eal='exa -Fhal'
 alias rg='rg -S'
 alias v='nvim'
-alias gw='./gradlew'
+alias gw='gradle'
 alias grhm='git reset --hard origin/master'
 alias grhf='git reset --hard origin/forno'
 alias glom='git pull origin master'

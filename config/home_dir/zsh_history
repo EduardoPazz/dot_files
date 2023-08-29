@@ -183,3 +183,35 @@ ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
 : 1692832767:0;cd dot_files
 : 1692832771:0;gs
 : 1692832778:0;ga .
+: 1692832780:0;gs
+: 1692832783:0;gsb
+: 1692832832:0;gc
+: 1692832841:0;als | less
+: 1692832858:0;glp
+: 1692832866:0;gradle
+: 1692832874:0;e
+: 1692832876:0;gsb
+: 1692832891:0;cd ~/Dev/5a/feed-service
+: 1692832896:0;gradle --version
+: 1692832908:0;source ~/.zshrc
+: 1692832910:0;gradle --version
+: 1692832922:0;v ~/.zshrc
+: 1692832950:0;g --version
+: 1692832956:0;g
+: 1692832963:0;v ~/.zshrc
+: 1692832974:0;gd --version
+: 1692832979:0;gd 
+: 1692832984:0;source ~/.zshrc
+: 1692832985:0;gd
+: 1692832993:0;v ~/.zshrc
+: 1692833004:0;source ~/.zshrc
+: 1692833012:0;v ~/.zshrc
+: 1692833024:0;source ~/.zshrc
+: 1692833031:0;v ~/.zshrc
+: 1692833039:0;source ~/.zshrc
+: 1692833042:0;gw
+: 1692833050:0;gw --version
+: 1692833070:0;uname -a
+: 1692833082:0;cd
+: 1692833084:0;gw --version
+: 1692833103:0;exit
