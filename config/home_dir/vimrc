@@ -1,0 +1,8 @@
+set ignorecase
+set incsearch
+set smartcase
+
+call plug#begin()
+Plug 'tpope/vim-surround'
+Plug 'vim-scripts/argtextobj.vim'
+call plug#end()

@@ -12,7 +12,7 @@
 	defaultBranch = main
 [core]
 	autocrlf = input
-	editor = nvim
+	editor = vim
 [push]
 	autoSetupRemote = true
 [credential]
