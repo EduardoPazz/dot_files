@@ -1,217 +1,1125 @@
-: 1692799495:0;brew
-: 1692799495:0;xcode-select  �install
-: 1692799495:0;xcode-select  �-install
-: 1692799495:0;xcode-select --install
-: 1692799495:0;git
-: 1692799495:0;/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-: 1692799495:0;    (echo; echo 'eval "$(/opt/homebrew/bin/brew shellenv)"') >> /Users/eduardopaz/.zprofile\
-    eval "$(/opt/homebrew/bin/brew shellenv)"
-: 1692799495:0;brew
-: 1692799495:0;brew install telegram
-: 1692799495:0;exit
-: 1692799495:0;brew install amethyst
-: 1692799495:0;brew install anki authy brave-browser discord jetbrains-toolbox notion postman raycast spotify steam visual-studio-code whatsapp
-: 1692799495:0;exit
-: 1692799495:0;brew asdf bat exa gradle neovim starship tldr
-: 1692799495:0;brew install asdf bat exa gradle neovim starship tldr
-: 1692799495:0;exit
-: 1692799495:0;ea
-: 1692799495:0;source .zshrc
-: 1692799495:0;ea
-: 1692799495:0;v 
-: 1692799495:0;nvim .zshrc
-: 1692799495:0;rm .zshrc
-: 1692799495:0;mv .zshrc.pre-oh-my-zsh .zshrc
-: 1692799495:0;ea
-: 1692799495:0;exa
-: 1692799495:0;exa -a
-: 1692799495:0;source .zshrc
-: 1692799495:0;asdf plugin install java
-: 1692799495:0;tldr asdf
-: 1692799495:0;asdf plugin add java
-: 1692799495:0;source .zshrc
-: 1692799495:0;asdf list-all java
-: 1692799495:0;asdf list-all java | less
-: 1692799495:0;asdf install java temurin-17.0.8+7
-: 1692799495:0;pbpaste > .tool-versions
-: 1692799495:0;source .zshrc
-: 1692799495:0;git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
-: 1692799495:0;git clone https://github.com/zsh-users/zsh-syntax-highlighting.git\
-echo "source ${(q-)PWD}/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh" >> ${ZDOTDIR:-$HOME}/.zshrc
-: 1692799495:0;source .zshrc
-: 1692799495:0;e
-: 1692799495:0;e zsh-syntax-highlighting
-: 1692799495:0;v .zshrc
-: 1692799495:0;rm -rf zsh-syntax-highlighting
-: 1692799495:0;brew install zsh-syntax-highlighting
-: 1692799495:0;pbpaste >> .zshrc
-: 1692799495:0;source .zshrc
-: 1692799495:0;v .zshrc
-: 1692799495:0;cd dot_files
-: 1692799495:0;gs
-: 1692799495:0;git diff config/
-: 1692799495:0;gc
-: 1692799495:0;ga .
-: 1692799495:0;gs
-: 1692799495:0;gc
-: 1692799495:0;gs
-: 1692799495:0;gp
-: 1692799495:0;cd
-: 1692799495:0;gs
-: 1692799495:0;asc
-: 1692799495:0;brew install gh
-: 1692799495:0;gh repo clone EduardoPazz/dot_files
-: 1692799495:0;gh auth login
-: 1692799495:0;gh auth login
-: 1692799495:0;gh repo clone EduardoPazz/dot_files
-: 1692799495:0;cd dot_files
-: 1692799495:0;e
-: 1692799495:0;ls
-: 1692799495:0;ls config
-: 1692799495:0;cd
-: 1692799495:0;cd .config
-: 1692799495:0;ln -s ~/dot_files/config/nvim .
-: 1692799495:0;ls
-: 1692799495:0;cd
-: 1692799495:0;cd dot_files
-: 1692799495:0;gh
-: 1692799495:0;gs
-: 1692799495:0;git status
-: 1692799495:0;git pull
-: 1692799495:0;cd
-: 1692799495:0;ls -a
-: 1692799495:0;ln -s dot_files/config/home_dir/gitconfig .gitconfig
-: 1692799495:0;ls -a
-: 1692799495:0;exa
-: 1692799495:0;ln -s dot_files/config/home_dir/zshrc .zshrc
-: 1692799495:0;source .zshrc
-: 1692799495:0;sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"\
-\
+glom
+gs
+gl
+glom
+gco forno
+gm feat/DN-1463-create-recently-viewed-feed-list-type
+grhm
+gs
+gm feat/DN-1463-create-recently-viewed-feed-list-type
+gpf
+qli env set forno
+qli database get forno-readonly-feed-service --ttl=48h
+qli database get forno-crud-feed-service --ttl=48h
+gco master
+gl
+qli env set prod
+qli database get prod-readonly-feed-service --ttl=48h
+qli login
+qli env set prod
+qli database get prod-readonly-feed-service --ttl=48h
+exit
+gs
+glom
+gs
+gp
+gco forno
+gm feat/DN-1374-use-new-yellow-pages-endpoints
+grhm
+gfa
+grhm
+gm feat/DN-1374-use-new-yellow-pages-endpoints
+gpf
+qli env set prod
+qli database get prod-readonly-feed-service --ttl=48h
+gl
+qli env set forno
+qli database get forno-crud-feed-service --ttl=48h
+gs
+gm feat/DN-1374-use-new-yellow-pages-endpoints
+gco master
+exit
+gcb chore/remove-recently-viewed-feed-list-type
+qli database get forno-crud-feed-service --ttl=48h
+gco DN-1430-create-listingId-index
+glom
+gp
+gco master
+gco -f master
+gl
+gcb chore/dn-1489-remove-whatsapp-campaigns
+qli env set prod
+qli database get prod-readonly-notify-me --ttl=48h
+qli database get prod-readonly-notifyme --ttl=48h
+qli database list | less
+qli login
+gb -m chore/dn-1489-remove-whatsapp-requirement-in-homes-canvas
+gs
+qli env set prod
+qli database list | less
+qli database get prod-readonly-notifyme --ttl=48h
+gco forno
+git stash
+alias gco
+gco forno
+gl
+git stash pop
+git stash
+gco master
+gcb chore/DN-1487-create-desligamento-rules
+git stash pop
+npm run build:templates
+asdf
+asdf install
+asdf current
+cd
+e
+ea
+v .asdfrc\
 
-: 1692799230:0;brew install whatsapp
-: 1692799495:0;exit
-: 1692800773:0;mkdir -p Dev/5a
-: 1692800778:0;cd Dev/5a
-: 1692800779:0;e
-: 1692800782:0;gh repo clone quintoandar/feed-service
-: 1692801025:0;cd ..
-: 1692801025:0;e
-: 1692801033:0;rm -rf 5a/*
-: 1692801039:0;ea 5a
-: 1692801047:0;rm -rf 5a
-: 1692801048:0;e
-: 1692801051:0;mkdir 5a
-: 1692801215:0;asdf install java temurin-11.0.18+10\
+exit
+asdf install
+asdf list-all nodejs | less
+asdf install nodejs 18.14.2
+asdf local nodejs 18.14.2
+npm i
+gco main
+gl
+gco -
+gm main
+gp
+gcb chore/DN-1487-create-desligamento-rules2
+git reset --hard main
+gp
+gco forno
+gl origin chore/DN-1487-create-desligamento-rules2
+gp
+gco forno
+gm chore/DN-1487-create-desligamento-rules
+gp
+qli database get prod-readonly-feed-service --ttl=48h
+qli database get prod-readonly-notifyme --ttl=48h
+exit
+glom
+gp
+gco forno
+gm feat/DN-1374-use-new-yellow-pages-endpoints
+qli env set forno
+qli database get forno-crud-feed-service --ttl=48h
+gco forno
+gl
+gm chore/dn-1489-remove-whatsapp-requirement-in-homes-canvas
+gp
+gco master
+gl
+gs
+gcb docs/update-api-docs
+gco master
+gl
+gs
+gp
+gs
+qli env set prod
+qli database get prod-readonly-notifyme --ttl=48h
+qli database get prod-readonly-feed-service --ttl=48h
+gl
+gcb chore/increase-job-deletion-limit
+gco 0
+gco -
+exit
+bubc
+exit
+cd ..
+e
+rm -rf kotlin-playground
+asdf list java
+b ~/.asdfrc
+b ~/.tool-versions
+exit
+gco master
+gl
+gco master
+gcb chore/add-debug-log
+gco master
+gcb fix/null-user-id
+gco master
+gco -
+glom
+gco master
+gl
+gco master
+gl
+gcb chore/use-log-error
+gb -m fix/validate-event-value
+glom
+gs
+git stash
+gco master
+g
+gl
+gcb fix/validate-event-value
+git stash pop
+gs
+gp
+gco master
+gl
+gcb chore/use-log-error
+gs
+glom
+gco master
+l
+gs
+gl
+exit
+qli database get prod-readonly-feed-service --ttl=48h
+sudo qli update
+gco fix/validate-event-value
+git stash
+gco 6e95306c
+gco -
+gcb fix/delay-calls-to-google-api
+git stash pop
+glom
+gl
+gs
+glom
+gs
+gco master
+gco master -f
+gl
+qli database get prod-readonly-feed-service --ttl=48h
+gl
+gcb feat/DN-1398-endpoints-for-feed-with-new-listings-only
+gco forno
+gfa
+grhf
+gm feat/DN-1398-endpoints-for-feed-with-new-listings-only
+gc
+gs
+gp
+qli env set forno
+qli database get forno-migration-feed-service --ttl=48h
+gco master
+gl
+gcb migration/add-fk-users-in-feed-list
+gs
+gfa
+grhm
+gco master
+gco master -f
+gl
+bubc
+brew info whatsapp
+brew reinstall whatsapp
+brew 
+brew install
+brew uninstall whatsapp
+bubc
+bc
+brew 
+tldr brew
+alias
+bubu
+brew cleanup
+brew cleanup --help
+brew cleanup --prune=all
+brew info whatsapp
+brew install whatsapp
+brew bump --open-pr whatsapp
+brew install whatsapp
+brew install whatsapp@2.23.23.82
+cd
+pbpaste > whatsapp.rb
+brew install whatsapp.rb
+brew bump --open-pr whatsapp
+brew bump --help | less
+glom
+gs
+gfa
+grhm
+gs
+gco
+gco master -f
+gl
+gs
+gcb chore/DN-1518-delete-obsolete-code
+gp
+gl
+gs
+gl
+gcb chore/DN-1518-delete-obsolete-queue
+gco master
+gl
+gco master
+gl
+gfa
+grhm
+gs
+gfa
+gs
+gl
+gs
+gfa
+gco forno
+gl
+gm chore/DN-1518-delete-obsolete-code
+gp
+e
+rm whatsapp.rb
+brew uninstall whatsapp
+brew install whatsapp
+alias | less
+bubu
+gco master
+gl
+gcb docs/create-feed-service-docs
+gs
+mv Desktop/João\ Eduardo\ da\ Paz\ Silva\ -\ Rescisao\ +\ Relatorio.pdf Documents/docs/estagio/
+cd Documents/docs/estagio
+e
+mkdir ultimo
+mv João\ Eduardo\ da\ Paz\ Silva\ -\ Rescisao\ +\ Relatorio.pdf ultimo
+gs
+..
+gs
+ga .
+gs
+gc
+gs
+gp
+cd
+cd wallpapers
+e
+gs
+ga .
+gc
+gs
+gp
+bun run index.ts
+e
+rm -rf kotlin-playground
+mv ../5a/kotlin-pg .
+exit
+gl
+git log -S fetchVisitAvailabilities
+git log -S schedule_page_viewed
+qli env set prod
+qli database get prod-readonly-feed-service --ttl=48h
+glom
+gc
+gco bump-deps-2
+git log -S fetchVisitAvailabilities
+gco master
+exit
+gcb docs/move-docs-to-backstage
+gl
+gcb docs/move-docs-to-backstage
+exit
+gco master
+gl
+gcb docs/move-docs-to-backstage
+gl
+gcb docs/move-docs-to-backstage
+gco master
+gl
+gcb chore/DN-1517-add-criteo-account
+gco master
+gl
+gcb chore/DN-1517-add-criteo-account
+bun run index.ts
+bun run index.ts > pbcopy
+qli database get prod-readonly-feed-service --ttl=48h
+sudo qli update
+qli update
+exit
+sudo qli update
+exit
+..
+rm -rf rinha
+e
+exit
+e
+..
+e
+cd Dev
+e
+cd personal
+e
+e rinha
+rm -rf rinha
+e
+curl --location 'localhost:8080/pessoas' \\
+--header 'Content-Type: application/json' \\
+--data '{\
+    "apelido": "josé",\
+    "nome": "José Roberto",\
+    "nascimento": "2000-10-01",\
+    "stack": [\
+        "C#",\
+        "Node",\
+        "Oracle"\
+    ]\
+}'
+gl
+qli database get prod-readonly-feed-service --ttl=48h
+glom
+brew uninstall --help
+brew uninstall --help | less
+brew uninstall jetbrains-toolbox
+brew search intellij
+brew install intellij-idea
+bubu
+npm install pg
+docker init
+docker run sha256:5b553ac598662a219b6cde92a158c3dbb6cafb703c51e5c064f357060f64c80a
+brew install --cask microsoft-remote-desktop
+cd
+cd dot_files
+e
+ea
+cd config
+e
+cd home_dir
+e
+v vimrc
+exit
+vimtutor
+sudo fs_usage -f filesys
+brew install --cask keycue
+npm install --save-dev eslint-config-prettier\
 
-: 1692801238:0;qli env set forno
-: 1692801246:0;qli login
-: 1692801262:0;mkdir ~/.qli
-: 1692801263:0;qli login
-: 1692801526:0;el /usr/local/bin
-: 1692801593:0;whoami
-: 1692801615:0;sudo chown eduardopaz /usr/local/bin/qli
-: 1692801659:0;sudo vim /etc/sudoers
-: 1692801713:0;sudo vim /etc/pam.d/sudo
-: 1692801737:0;qli login
-: 1692801848:0;sudo chown eduardopaz /tmp/qli
-: 1692801851:0;qli login
-: 1692801907:0;el /usr/local/bin
-: 1692801929:0;el /tmp/qli
-: 1692801946:0;sudo qli login
-: 1692802026:0;qli env set forno
-: 1692802052:0;qli login
-: 1692802072:0;qli env set forno
-: 1692802088:0;qli database get forno-readonly-feed-service --ttl=48h
-: 1692802207:0;gco forno
-: 1692802230:0;gl origin feat/DN-1199-api-trigger-feed-processing
-: 1692802235:0;gs
-: 1692802237:0;exit
-: 1692810389:0;gh repo clone EduardoPazz/wallpapers
-: 1692810672:0;exit
-: 1692812277:0;gco -
-: 1692812282:0;gco feat/DN-1199-api-trigger-feed-processing
-: 1692812287:0;glom
-: 1692812298:0;gp
-: 1692814675:0;qli env set prod
-: 1692814686:0;qli database get prod-readonly-feed-service --ttl=48h
-: 1692815579:0;gco master
-: 1692815615:0;gcb feat/DN-1201-unify-get-feed-endpoints
-: 1692815926:0;gw build
-: 1692831040:0;brew install ffmpeg
-: 1692831216:0;convert
-: 1692831222:0;ls 
-: 1692831309:0;git clone https://github.com/zsh-users/zsh-syntax-highlighting.git\
-\
-${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
-: 1692831318:0;cd .oh-my-zsh
-: 1692831319:0;e
-: 1692831326:0;cd custom
-: 1692831327:0;e
-: 1692831341:0;git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
-: 1692831364:0;brew uninstall zsh-syntax-highlighting
-: 1692831373:0;cd
-: 1692831375:0;v .zshrc
-: 1692831391:0;source .zshrc
-: 1692831413:0;cd dot_files
-: 1692831420:0;gs
-: 1692831449:0;ga .
-: 1692831452:0;gc
-: 1692831479:0;gs
-: 1692831480:0;gp
-: 1692831492:0;asc
-: 1692831494:0;cd
-: 1692831512:0;e -T2 dot_files
-: 1692831515:0;e -T 2 dot_files
-: 1692831544:0;ea
-: 1692831563:0;b .zprofile
-: 1692831583:0;b .zsh_history
-: 1692831629:0;mv .zsh_history dot_files/config/home_dir/zsh_history
-: 1692831699:0;eal
-: 1692831711:0;cd dot_files
-: 1692831713:0;gs
-: 1692831718:0;ga .
-: 1692831719:0;gs
-: 1692831761:0;als
-: 1692831924:0;tldr brew upgrade
-: 1692831936:0;brew upgrade --help
-: 1692831941:0;brew upgrade --help | less
-: 1692831960:0;bubu
-: 1692832028:0;brew outdated --help | less
-: 1692832055:0;als | less
-: 1692832701:0;cd
-: 1692832705:0;v .zshrc
-: 1692832767:0;cd dot_files
-: 1692832771:0;gs
-: 1692832778:0;ga .
-: 1692832780:0;gs
-: 1692832783:0;gsb
-: 1692832832:0;gc
-: 1692832841:0;als | less
-: 1692832858:0;glp
-: 1692832866:0;gradle
-: 1692832874:0;e
-: 1692832876:0;gsb
-: 1692832891:0;cd ~/Dev/5a/feed-service
-: 1692832896:0;gradle --version
-: 1692832908:0;source ~/.zshrc
-: 1692832910:0;gradle --version
-: 1692832922:0;v ~/.zshrc
-: 1692832950:0;g --version
-: 1692832956:0;g
-: 1692832963:0;v ~/.zshrc
-: 1692832974:0;gd --version
-: 1692832979:0;gd 
-: 1692832984:0;source ~/.zshrc
-: 1692832985:0;gd
-: 1692832993:0;v ~/.zshrc
-: 1692833004:0;source ~/.zshrc
-: 1692833012:0;v ~/.zshrc
-: 1692833024:0;source ~/.zshrc
-: 1692833031:0;v ~/.zshrc
-: 1692833039:0;source ~/.zshrc
-: 1692833042:0;gw
-: 1692833050:0;gw --version
-: 1692833070:0;uname -a
-: 1692833082:0;cd
-: 1692833084:0;gw --version
-: 1692833103:0;exit
+cp ../rinha2/compose.yaml .
+npm i pg
+npm install knex --save
+npm help | less
+npm install --help | less
+npm help install | less
+exit
+npx knex init -x ts
+npx knex migrate:make init -x ts
+npx knex migrate:make init -x ts --knexfile src/knexfile.ts
+npx knex migrate:latest
+npx knex migrate:latest --knexfile src/lib/knexfile.ts
+npm i
+npx knex migrate:latest --knexfile src/lib/knexfile.ts
+npm i --save-dev @types/pg 
+exit
+qli database get prod-readonly-feed-service --ttl=48h
+gco chore/DN-1517-add-criteo-account
+gs
+exit
+gs
+glom
+gco forno 
+gm chore/DN-1517-add-criteo-account
+gp
+gs
+gco forno
+gm chore/DN-1517-add-criteo-account
+gp
+history | less
+cd ~/Desktop
+e
+wc -l 47645.json
+tldr wc
+gco master
+gl
+qli database list | less
+qli database get prod-readonly-customerengagementhub
+tail ~/Desktop/47645.json
+qli database get prod-readonly-customerengagementhub --ttl=48h
+sudo qli update
+exit
+gcb chore/add-debug-log
+exit
+gco master
+gcb chore/add-debug-log
+curl 'http://pwa.dev.forno.quintoandar.com.br/api/yellow-pages/recommendations/house/893506897/nearby?business_context=RENT&size=5' \\
+  -H 'Accept: */*' \\
+  -H 'Accept-Language: pt-BR,pt;q=0.9,en-US;q=0.8,en;q=0.7' \\
+  -H 'Connection: keep-alive' \\
+  -H 'Cookie: _fbp=fb.2.1698341153401.720642233; _gcl_au=1.1.371448711.1698341154; amplitude_id_720e088483c6501c5cdd1c3ebe7bad94quintoandar.com.br=eyJkZXZpY2VJZCI6IjgxY2JiZTg2LTNmMjQtNDE4MS1iZjgxLTA0NjZlZTg1ZDk5MVIiLCJ1c2VySWQiOm51bGwsIm9wdE91dCI6ZmFsc2UsInNlc3Npb25JZCI6MTY5OTU1MzA2NzE4OSwibGFzdEV2ZW50VGltZSI6MTY5OTU1MzA2NzIzNSwiZXZlbnRJZCI6MywiaWRlbnRpZnlJZCI6MTIsInNlcXVlbmNlTnVtYmVyIjoxNX0=; amplitude_id_c64ebd2cddec3a95ac7e6478b6785ea7quintoandar.com.br=eyJkZXZpY2VJZCI6ImU5N2UxNWNkLWMxNWUtNGI5ZC1hMjc1LTY0YzcyNGRhOTJiZVIiLCJ1c2VySWQiOm51bGwsIm9wdE91dCI6ZmFsc2UsInNlc3Npb25JZCI6MTcwMDM0NjE2Njk1OCwibGFzdEV2ZW50VGltZSI6MTcwMDM0NjQ0Njk2NywiZXZlbnRJZCI6MCwiaWRlbnRpZnlJZCI6MCwic2VxdWVuY2VOdW1iZXIiOjB9; amp_c64ebd=MddOEeZZxEHNIM3rgI1rNU.MzY2Nzc4OQ==..1hfi8b107.1hfi8ol8s.c.1.d; amp_4c0d44=Mz4DGj680hzHGl2ZdcDiJ-...1hfs9o1oc.1hfs9o1oc.1q.0.1q; amplitude_id_e321736a3a3ceba5127a25af0d38699fquintoandar.com.br=eyJkZXZpY2VJZCI6Im9iSThWY1g2TldBLVN0QkVCTkpsZGZDTWFYMWtVUkQ3ZHRZdHB5dGVIdXd6Y1h0MWl3S291USIsInVzZXJJZCI6IjE2MDQxMTgiLCJvcHRPdXQiOmZhbHNlLCJzZXNzaW9uSWQiOjE3MDI1NzYwMzU5NTcsImxhc3RFdmVudFRpbWUiOjE3MDI1NzYwNjQ5MjIsImV2ZW50SWQiOjYwLCJpZGVudGlmeUlkIjo1MSwic2VxdWVuY2VOdW1iZXIiOjExMX0=; _clck=tz3vmy%7C2%7Cfhj%7C0%7C1443; OptanonConsent=isGpcEnabled=0&datestamp=Thu+Dec+14+2023+14%3A48%3A03+GMT-0300+(Hor%C3%A1rio+Padr%C3%A3o+de+Bras%C3%ADlia)&version=202302.1.0&isIABGlobal=false&hosts=&consentId=3831b7df-b34b-4c2a-9dcd-3ba1f2782650&interactionCount=1&landingPath=https%3A%2F%2Fconteudos.quintoandar.com.br%2Fferramentas%2F&groups=C0001%3A1%2CC0005%3A0%2CC0004%3A0%2CC0003%3A0%2CC0002%3A0; _ga_L3E7HRD80N=GS1.1.1702576080.1.1.1702576083.57.0.0; amplitude_id_b1c52e49f338d8374baef9be2e5d99ffquintoandar.com.br=eyJkZXZpY2VJZCI6Imd6aGFVVTdUd0RMaU5wY3BMNWE5ZDlWY28tRm13UW5iN2k2SUVDRjRFb1c3QTF6djloR3dUQSIsInVzZXJJZCI6bnVsbCwib3B0T3V0IjpmYWxzZSwic2Vzc2lvbklkIjoxNzAzMDExMDg4Nzk5LCJsYXN0RXZlbnRUaW1lIjoxNzAzMDExMTQxNzUxLCJldmVudElkIjozLCJpZGVudGlmeUlkIjo2LCJzZXF1ZW5jZU51bWJlciI6OX0=; _ga_7595GGKEK8=GS1.3.1703011142.2.0.1703011142.60.0.0; _ga=GA1.1.177792354.1698341154; _ga_RM6FW4MM8F=GS1.1.1703015993.4.0.1703015993.60.0.0; _ga_EN5X36BXTN=GS1.1.1703015993.4.0.1703015993.0.0.0; _ga_1W6FE6T2GS=GS1.1.1703092581.5.0.1703092581.0.0.0; amp_b081f8=v4TTlKutFRdL59HVNf_0Z-.dXNlcjpkZWZhdWx0L3BhdWxhLmZyZWl0YXM=..1hja62al5.1hja62j8q.a.0.a; cto_bundle=YeLrrl9pV2xIa3FUTmlRQ3NheXR6UW92aWdYdEo0Rm9FNmo3UWFEWE1Cak9GeGtvMCUyQiUyQllqOGhIOFlUQlVaQm92dGFxZzNkdlhha3lCS3ZJYiUyQiUyRmV4N1Q0QTBZVjI2eVo4RTFsaEJFalpxdkZlQyUyRnBRdzRkVHR4aVdqRSUyQnJwQVJYTXBkNjRMOHlOVEZEWE54ZmRDbDBzM0JCeHlLaGw1dUx3MW1YMmkxTk1OazJKcFhoYUZSRyUyQmhma2w2YzY3cHpCWFVXOTJVSUZhQzRpT25ZTEklMkZhWXpmTVFoRGI0UmtrdUtCTlpYdjZBQ2VkVlhTVURSN2tncFlwYzM4Q3cwYWlGT3U5ZlBzJTJCdjFuQ2FFWVZ4M3Vpa2tqQTYlMkZCVjhrRnYlMkJIdVM3bUUlMkJTcHFONUI4cXN6N0dLY0VsR1NCdXpYOXY4eVVQMg; _uetsid=80745b30a9b511eea8cbb1f13b6a8556; _uetvid=50d68a6041f411eea208e7be94183438; amplitude_id_3fbf25d58c3cce92f0e6609904a37cc9quintoandar.com.br=eyJkZXZpY2VJZCI6IjZmQm5GazhjU1dGTXRTOUpJaXZQWlBlMm1WbHlUcjU0WHdiYWN2dGJpVEotazZUZmViTGZiQSIsInVzZXJJZCI6bnVsbCwib3B0T3V0IjpmYWxzZSwic2Vzc2lvbklkIjoxNzA0Mzc4MzAzMDI3LCJsYXN0RXZlbnRUaW1lIjoxNzA0Mzc4NjU2NzYzLCJldmVudElkIjoxOTAsImlkZW50aWZ5SWQiOjQxOCwic2VxdWVuY2VOdW1iZXIiOjYwOH0=; _ga_2NHZ8V3TH0=GS1.1.1704388356.21.0.1704388356.60.0.0; X-AB-Test=ab_alert_properties_counter:2,ab_cozy_find_house_card:-1,ab_favorites_availability_alert:-1,ab_find_loop_2:1,ab_finding_house_card:0,ab_hls_client_list_v2:0,ab_listing_experiments_disabled:0,ab_listing_reports:1,ab_listing_sale_pricing_report:1,ab_remove_document_number:-1,ab_search_cockpit_desktop_v0:-1,ab_street_search_highlight_v1:0,ab_tof_listing_age_v1:0,abc_search_cockpit_v1:1,abc_social_login:1; ab.storage.sessionId.b5dec186-a708-4695-a464-dba7cf8a24df=%7B%22g%22%3A%22e7940bc5-14fe-fbea-de20-5a5aaeb99cc8%22%2C%22e%22%3A1704452993815%2C%22c%22%3A1704451127392%2C%22l%22%3A1704451193815%7D; amplitude_id_9e4d4c171e166ec901e453a00aa2b044quintoandar.com.br=eyJkZXZpY2VJZCI6InlWT0JDN01sRFo4NkxHSEV2YmNVUWtiaHNrZFh5aWtaNnc5aTdJdzBoc2VsanF2OTE0N2kyZyIsInVzZXJJZCI6bnVsbCwib3B0T3V0IjpmYWxzZSwic2Vzc2lvbklkIjoxNzA0NDUxMTI3Mzg2LCJsYXN0RXZlbnRUaW1lIjoxNzA0NDUxMTkzODg0LCJldmVudElkIjoyNTUsImlkZW50aWZ5SWQiOjI4ODksInNlcXVlbmNlTnVtYmVyIjozMTQ0fQ==' \\
+  -H 'Referer: http://pwa.dev.forno.quintoandar.com.br/imovel/893506897/alugar/apartamento-2-quartos-consolacao-sao-paulo' \\
+  -H 'User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36' \\
+  --compressed \\
+  --insecure
+curl 'https://yellow-pages.forno.quintoandar.com.br/api/recommendations/house/893506897/nearby?business_context=RENT&size=5' \\
+  -H 'Accept: */*' \\
+  -H 'Accept-Language: pt-BR,pt;q=0.9,en-US;q=0.8,en;q=0.7' \\
+  -H 'Connection: keep-alive' \\
+  -H 'Cookie: _fbp=fb.2.1698341153401.720642233; _gcl_au=1.1.371448711.1698341154; amplitude_id_720e088483c6501c5cdd1c3ebe7bad94quintoandar.com.br=eyJkZXZpY2VJZCI6IjgxY2JiZTg2LTNmMjQtNDE4MS1iZjgxLTA0NjZlZTg1ZDk5MVIiLCJ1c2VySWQiOm51bGwsIm9wdE91dCI6ZmFsc2UsInNlc3Npb25JZCI6MTY5OTU1MzA2NzE4OSwibGFzdEV2ZW50VGltZSI6MTY5OTU1MzA2NzIzNSwiZXZlbnRJZCI6MywiaWRlbnRpZnlJZCI6MTIsInNlcXVlbmNlTnVtYmVyIjoxNX0=; amplitude_id_c64ebd2cddec3a95ac7e6478b6785ea7quintoandar.com.br=eyJkZXZpY2VJZCI6ImU5N2UxNWNkLWMxNWUtNGI5ZC1hMjc1LTY0YzcyNGRhOTJiZVIiLCJ1c2VySWQiOm51bGwsIm9wdE91dCI6ZmFsc2UsInNlc3Npb25JZCI6MTcwMDM0NjE2Njk1OCwibGFzdEV2ZW50VGltZSI6MTcwMDM0NjQ0Njk2NywiZXZlbnRJZCI6MCwiaWRlbnRpZnlJZCI6MCwic2VxdWVuY2VOdW1iZXIiOjB9; amp_c64ebd=MddOEeZZxEHNIM3rgI1rNU.MzY2Nzc4OQ==..1hfi8b107.1hfi8ol8s.c.1.d; amp_4c0d44=Mz4DGj680hzHGl2ZdcDiJ-...1hfs9o1oc.1hfs9o1oc.1q.0.1q; amplitude_id_e321736a3a3ceba5127a25af0d38699fquintoandar.com.br=eyJkZXZpY2VJZCI6Im9iSThWY1g2TldBLVN0QkVCTkpsZGZDTWFYMWtVUkQ3ZHRZdHB5dGVIdXd6Y1h0MWl3S291USIsInVzZXJJZCI6IjE2MDQxMTgiLCJvcHRPdXQiOmZhbHNlLCJzZXNzaW9uSWQiOjE3MDI1NzYwMzU5NTcsImxhc3RFdmVudFRpbWUiOjE3MDI1NzYwNjQ5MjIsImV2ZW50SWQiOjYwLCJpZGVudGlmeUlkIjo1MSwic2VxdWVuY2VOdW1iZXIiOjExMX0=; _clck=tz3vmy%7C2%7Cfhj%7C0%7C1443; OptanonConsent=isGpcEnabled=0&datestamp=Thu+Dec+14+2023+14%3A48%3A03+GMT-0300+(Hor%C3%A1rio+Padr%C3%A3o+de+Bras%C3%ADlia)&version=202302.1.0&isIABGlobal=false&hosts=&consentId=3831b7df-b34b-4c2a-9dcd-3ba1f2782650&interactionCount=1&landingPath=https%3A%2F%2Fconteudos.quintoandar.com.br%2Fferramentas%2F&groups=C0001%3A1%2CC0005%3A0%2CC0004%3A0%2CC0003%3A0%2CC0002%3A0; _ga_L3E7HRD80N=GS1.1.1702576080.1.1.1702576083.57.0.0; amplitude_id_b1c52e49f338d8374baef9be2e5d99ffquintoandar.com.br=eyJkZXZpY2VJZCI6Imd6aGFVVTdUd0RMaU5wY3BMNWE5ZDlWY28tRm13UW5iN2k2SUVDRjRFb1c3QTF6djloR3dUQSIsInVzZXJJZCI6bnVsbCwib3B0T3V0IjpmYWxzZSwic2Vzc2lvbklkIjoxNzAzMDExMDg4Nzk5LCJsYXN0RXZlbnRUaW1lIjoxNzAzMDExMTQxNzUxLCJldmVudElkIjozLCJpZGVudGlmeUlkIjo2LCJzZXF1ZW5jZU51bWJlciI6OX0=; _ga_7595GGKEK8=GS1.3.1703011142.2.0.1703011142.60.0.0; _ga=GA1.1.177792354.1698341154; _ga_RM6FW4MM8F=GS1.1.1703015993.4.0.1703015993.60.0.0; _ga_EN5X36BXTN=GS1.1.1703015993.4.0.1703015993.0.0.0; _ga_1W6FE6T2GS=GS1.1.1703092581.5.0.1703092581.0.0.0; amp_b081f8=v4TTlKutFRdL59HVNf_0Z-.dXNlcjpkZWZhdWx0L3BhdWxhLmZyZWl0YXM=..1hja62al5.1hja62j8q.a.0.a; cto_bundle=YeLrrl9pV2xIa3FUTmlRQ3NheXR6UW92aWdYdEo0Rm9FNmo3UWFEWE1Cak9GeGtvMCUyQiUyQllqOGhIOFlUQlVaQm92dGFxZzNkdlhha3lCS3ZJYiUyQiUyRmV4N1Q0QTBZVjI2eVo4RTFsaEJFalpxdkZlQyUyRnBRdzRkVHR4aVdqRSUyQnJwQVJYTXBkNjRMOHlOVEZEWE54ZmRDbDBzM0JCeHlLaGw1dUx3MW1YMmkxTk1OazJKcFhoYUZSRyUyQmhma2w2YzY3cHpCWFVXOTJVSUZhQzRpT25ZTEklMkZhWXpmTVFoRGI0UmtrdUtCTlpYdjZBQ2VkVlhTVURSN2tncFlwYzM4Q3cwYWlGT3U5ZlBzJTJCdjFuQ2FFWVZ4M3Vpa2tqQTYlMkZCVjhrRnYlMkJIdVM3bUUlMkJTcHFONUI4cXN6N0dLY0VsR1NCdXpYOXY4eVVQMg; _uetsid=80745b30a9b511eea8cbb1f13b6a8556; _uetvid=50d68a6041f411eea208e7be94183438; amplitude_id_3fbf25d58c3cce92f0e6609904a37cc9quintoandar.com.br=eyJkZXZpY2VJZCI6IjZmQm5GazhjU1dGTXRTOUpJaXZQWlBlMm1WbHlUcjU0WHdiYWN2dGJpVEotazZUZmViTGZiQSIsInVzZXJJZCI6bnVsbCwib3B0T3V0IjpmYWxzZSwic2Vzc2lvbklkIjoxNzA0Mzc4MzAzMDI3LCJsYXN0RXZlbnRUaW1lIjoxNzA0Mzc4NjU2NzYzLCJldmVudElkIjoxOTAsImlkZW50aWZ5SWQiOjQxOCwic2VxdWVuY2VOdW1iZXIiOjYwOH0=; _ga_2NHZ8V3TH0=GS1.1.1704388356.21.0.1704388356.60.0.0; X-AB-Test=ab_alert_properties_counter:2,ab_cozy_find_house_card:-1,ab_favorites_availability_alert:-1,ab_find_loop_2:1,ab_finding_house_card:0,ab_hls_client_list_v2:0,ab_listing_experiments_disabled:0,ab_listing_reports:1,ab_listing_sale_pricing_report:1,ab_remove_document_number:-1,ab_search_cockpit_desktop_v0:-1,ab_street_search_highlight_v1:0,ab_tof_listing_age_v1:0,abc_search_cockpit_v1:1,abc_social_login:1; ab.storage.sessionId.b5dec186-a708-4695-a464-dba7cf8a24df=%7B%22g%22%3A%22e7940bc5-14fe-fbea-de20-5a5aaeb99cc8%22%2C%22e%22%3A1704452993815%2C%22c%22%3A1704451127392%2C%22l%22%3A1704451193815%7D; amplitude_id_9e4d4c171e166ec901e453a00aa2b044quintoandar.com.br=eyJkZXZpY2VJZCI6InlWT0JDN01sRFo4NkxHSEV2YmNVUWtiaHNrZFh5aWtaNnc5aTdJdzBoc2VsanF2OTE0N2kyZyIsInVzZXJJZCI6bnVsbCwib3B0T3V0IjpmYWxzZSwic2Vzc2lvbklkIjoxNzA0NDUxMTI3Mzg2LCJsYXN0RXZlbnRUaW1lIjoxNzA0NDUxMTkzODg0LCJldmVudElkIjoyNTUsImlkZW50aWZ5SWQiOjI4ODksInNlcXVlbmNlTnVtYmVyIjozMTQ0fQ==' \\
+  -H 'Referer: http://pwa.dev.forno.quintoandar.com.br/imovel/893506897/alugar/apartamento-2-quartos-consolacao-sao-paulo' \\
+  -H 'User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36' \\
+  --compressed \\
+  --insecure
+curl 'https://yellow-pages.forno.quintoandar.com.br/api/recommendations/house/893506897/nearby?business_context=RENT&size=5' \\
+  -H 'Accept: */*' \\
+  -H 'Accept-Language: pt-BR,pt;q=0.9,en-US;q=0.8,en;q=0.7' \\
+  -H 'Connection: keep-alive' \\
+  -H 'Referer: http://pwa.dev.forno.quintoandar.com.br/imovel/893506897/alugar/apartamento-2-quartos-consolacao-sao-paulo' \\
+  -H 'User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36' \\
+  --compressed \\
+  --insecure
+curl 'https://yellow-pages.forno.quintoandar.com.br/api/recommendations/house/893506897/nearby?business_context=RENT&size=5'
+curl 'https://yellow-pages.quintoandar.com.br/api/recommendations/house/893506897/nearby?business_context=RENT&size=5'
+curl 'https://yellow-pages.quintoandar.com.br/api/recommendations/house/892783910/nearby?business_context=RENT&size=5'
+rew install --cask logseq
+brew install --cask logseq
+brew install --cask obsidian
+brew uninstall logseq obsidian
+brew install virtualbox
+brew install --cask utm
+gco master
+gl
+qli database get prod-readonly-customerengagementhub --ttl=48h
+sudo qli update
+exit
+gcb fix/duplicated-keys-in-user-event-attributes-preprocessing
+gp -f
+gco forno
+l
+gl
+gm fix/duplicated-keys-in-user-event-attributes-preprocessing
+grhm
+gm fix/duplicated-keys-in-user-event-attributes-preprocessing
+gp -f
+gco master
+gl
+sudo dscacheutil -flushcache; sudo killall -HUP mDNSResponder
+brew install --cask opendnsupdater
+gco master
+gl
+brew install --cask microsoft-edge
+gcb feat/add-cache-and-logs-for-short-url-service
+gs
+gco forno
+gfa
+grhf
+gm feat/add-cache-and-logs-for-short-url-service
+gc
+gs
+gp
+gc --allow-empty
+gco -
+gs
+gc --allow-empty
+gp
+gco master
+gco revert-210-chore/add-debug-log
+gfa
+gco revert-210-chore/add-debug-log
+gc --allow-empty
+gp
+gco forno
+gfa
+gl
+grhm
+gp -f
+gs
+gp
+glom
+git diff
+g
+gs
+gp
+gco forno
+gl
+gm fix/duplicated-keys-in-user-event-attributes-preprocessing
+gp
+gfa
+grhm
+gm fix/duplicated-keys-in-user-event-attributes-preprocessing
+gs
+gp -f
+gp
+qli env set forno
+history | less
+qli database get forno-readonly-notifyme --ttl=48h
+qli database get forno-crud-notifyme --ttl=48h
+grhm
+gfa
+grhm
+gp -f
+brew install logseq
+gs
+gm fix/duplicated-keys-in-user-event-attributes-preprocessing
+gp
+history | less
+brew uninstall opendnsupdater
+gco master
+gl
+gco master
+gl
+gco forno
+grh 8e723b59c225d79ac0a3c4537306f292082db4bd
+gs
+gp -f
+gcb fix/fix-scheduler-name
+gco forno
+gl
+gm fix/fix-scheduler-name
+gp
+gl
+gcb fix/springfox-issue
+gfa
+grhm
+gco master
+gl
+gco forno
+gl
+gm fix/springfox-issue
+gp
+gcb chore/remove-unnecessary-steps
+gfa
+glom
+git reset master
+gfa
+glom
+gc
+gm fix/duplicated-keys-in-user-event-attributes-preprocessing
+gco fix/duplicated-keys-in-user-event-attributes-preprocessing
+gl
+glom
+gco forno
+gp
+gl
+gfa
+grhm
+gp -f
+gco -
+gc --allow-empty
+gp
+brew uninstall logseq
+brew install obsidian
+cd Documents
+e
+rm -rf logseq obsidian
+cd Documents
+e
+e -T cofrinho
+mv cofrinho tmp
+mv tmp/cofrinho cofrinho
+e
+e -T
+e -T1
+e -T2
+e -T=2
+gl
+gco master
+gl
+qli env set prod
+qli database get prod-readonly-customerengagementhub --ttl=48h
+gco master
+gl
+grhm
+gfa
+history | less
+qli database get prod-readonly-ebdb
+sudo qli update
+exit
+qli database get prod-readonly-ebdb --ttl=48h
+qli database list | less
+gco master
+gl
+qli database get prod-readonly-marketinghub --ttl=48h
+qli database get prod-readonly-customerengagementhub --ttl=48h
+python main.py > pbcopy
+python main.py 
+python main.py | pbcopy
+pbpaste | wc -l
+gl
+bun run hello.ts
+bun run hello.ts > output.json
+asdf install nodejs 10.15.0\
+
+npm i
+python
+asdf install nodejs 10.15.0\
+
+make
+qli database get prod-readonly-ebdb --ttl=48h
+qli login
+sudo qli update
+qli database get prod-readonly-ebdb --ttl=48h
+exit
+qli
+qli kv
+qli kv list
+sudo qli update
+qli kv list appps
+exit
+qli kv list apps
+qli kv list apps/prod
+qli kv list apps/prod | less
+qli kv list
+qli kv list prod
+bun run hello.ts | pbcopy
+qli database get prod-readonly-ebdb --ttl=48h
+exit
+cd ..
+cd kube
+e
+cd forno
+e
+b api-mobile-ro.yaml
+git log -S quintoandardbprod-read1.ciuoqxapzjot.us-east-1.rds.amazonaws.com
+gco fa3a85a691743c44b1f48b861bc513a968c5ad53
+gco fa3a85a691743c44b1f48b861bc513a968c5ad53 -f
+gcb fix/update-ebdb-host
+asdf list
+cd
+asdf list
+brew list
+brew uninstall bun
+brew install deno
+exit
+deno run index.ts --allow-read --allow-write
+deno run --allow-read --allow-write index.ts
+npm i -g @types/node
+npm init
+brew install bun
+qli database get prod-readonly-ebdb --ttl=48h
+mv ../javascripts/ids.csv .
+bun init
+npm i
+bun i
+bun add -D @tsconfig/bun
+bun add --help
+bun add -D @tsconfig/bun@next
+bun add -D @tsconfig/bun@latest
+bun i
+which bun
+bun run index.ts
+deno init
+deno run main.ts
+npm init
+which node
+asdf list nodejs
+cd
+b .tool-versions
+node --version
+bubo
+bubu
+npm install --save-dev @tsconfig/node-lts\
+
+e
+ea
+rm -rf package* node_modules
+exit
+npm install --save-dev @tsconfig/node-lts\
+
+npm install --save-dev typescript@latest
+npx tsc init
+npx tsc
+npx tsc --init
+npm i
+qli database get prod-readonly-customerengagementhub --ttl=48h
+qli database get prod-readonly-ebdb --ttl=48h
+pip install pandas
+exit
+mv *.csv
+mkdir ../tmp
+mv *.csv ../tmp
+e
+..
+e
+rm -rf python-scripts
+pip install jupyter
+mv ../tmp/* .
+v references_quinto_andar.csv
+exit
+gco master
+gl
+gco forno
+gco master
+gcb fix/bump-facebook-sdk
+gco forno
+gm fix/bump-facebook-sdk
+gfa
+grhm
+gm fix/bump-facebook-sdk
+gp -f
+npm init
+bun init
+bun run index.ts
+bun add cheerio
+bun run index2.ts
+bun run index.ts > result.csv
+qli env set forno
+qli database get forno-readonly-marketingthirdpartyhub --ttl=48h
+qli database list | less
+qli database get forno-crud-marketinhub --ttl=48h
+qli database get forno-crud-marketinghub --ttl=48h
+qli kv get kv/data/apps/forno/user-segmentation/marketing-hub-api-token#value
+qli kv get kv/data/apps/forno/user-segmentation/marketing-hub-api-token
+qli login
+qli kv list
+qli kv list kv
+qli kv get  /apps/forno/user-segmentation/marketing-hub-api-token\
+
+gco master
+gl
+gco forno
+gco master
+gl
+gcb fix/bump-google-sdk
+gradle --version
+gradle --help
+gradle update
+gradle --help | less
+gradle wrapper --gradle-version 6.3
+gradle wrapper --gradle-version 7.3
+gradle --warning-mode all
+glom
+gco forno
+gfa
+grhm
+gm fix/bump-google-sdk
+gpf
+qli database get forno-crud-marketinghub --ttl=48h
+cd wallpapers
+gl
+gco forno
+glom
+gfa
+grhm
+gpf
+gs
+gc --allow-empty
+gp
+curl 'https://forno.quintoandar.com.br/api/notify-me/alerts/v2/?active=true&campaign_name=HOMES' \\
+  -H 'authority: forno.quintoandar.com.br' \\
+  -H 'accept: application/json' \\
+  -H 'accept-language: pt-BR,pt;q=0.9,en-US;q=0.8,en;q=0.7' \\
+  -H 'content-type: application/json' \\
+  -H 'cookie: __zlcmid=1HUm4GOxGbIWNzC; _fbp=fb.2.1692820880700.1104834017; _hjSessionUser_1203740=eyJpZCI6IjIxNDEzNGRkLTYyNGEtNWJjMi05ZjhlLTg3MWE0ZGUyOWRkOCIsImNyZWF0ZWQiOjE2OTI4MjA4ODE3MzgsImV4aXN0aW5nIjp0cnVlfQ==; 5A_COOKIE_ACCEPT=%7B%22categories%22%3A%5B%22necessary%22%2C%22performance%22%2C%22targeting%22%2C%22functional%22%5D%7D; _ga_KMK3Q3569D=GS1.3.1696608479.1.0.1696608479.0.0.0; _ga_QX74E8GKN4=GS1.3.1698177440.2.0.1698177440.0.0.0; amplitude_id_9caf9dfbba44d1a9013983613cdc3a69quintoandar.com.br=eyJkZXZpY2VJZCI6IjhmZjE5MWFlLWVhZjYtNGU3YS05MDRhLTVjNmUxNDU5NDkyZlIiLCJ1c2VySWQiOiI0MDI5MjUwIiwib3B0T3V0IjpmYWxzZSwic2Vzc2lvbklkIjoxNjk4MTc3NDQxMDEwLCJsYXN0RXZlbnRUaW1lIjoxNjk4MTc3NDQyNDc0LCJldmVudElkIjoyLCJpZGVudGlmeUlkIjoxLCJzZXF1ZW5jZU51bWJlciI6M30=; _ga=GA1.1.184473444.1692797288; _hjSessionUser_1461962=eyJpZCI6ImY1ODg5ZjBkLThhZjAtNTk3Ny04ZWE5LWM5MmQ4NDVjZmY3MiIsImNyZWF0ZWQiOjE2OTg4NTE1NDA4MjAsImV4aXN0aW5nIjpmYWxzZX0=; _hjMinimizedPolls=950565%2C955998; _hjDonePolls=955998; amplitude_id_c1080b612f6a0176a0a3857eb33af85equintoandar.com.br=eyJkZXZpY2VJZCI6ImY3MGQxZjk3LTA5YzgtNDYwNy04ZGM1LTRlMzQ5NzE2MDdmMlIiLCJ1c2VySWQiOm51bGwsIm9wdE91dCI6ZmFsc2UsInNlc3Npb25JZCI6MTcwMDY3ODA1MDgyMiwibGFzdEV2ZW50VGltZSI6MTcwMDY3ODk1OTcxOCwiZXZlbnRJZCI6MTEsImlkZW50aWZ5SWQiOjExLCJzZXF1ZW5jZU51bWJlciI6MjJ9; _gcl_au=1.1.1036971643.1700837077; amplitude_id_7fed055b8d4c1d149c36ac51b353cf7cquintoandar.com.br=eyJkZXZpY2VJZCI6IjgzZTY3ZDc5LWYyYjAtNGI2OS04ZWMzLWNiNDU2NWZlZGFhZFIiLCJ1c2VySWQiOm51bGwsIm9wdE91dCI6ZmFsc2UsInNlc3Npb25JZCI6MTcwMDgzNzU5OTk3MCwibGFzdEV2ZW50VGltZSI6MTcwMDgzNzYwMDAwOCwiZXZlbnRJZCI6NCwiaWRlbnRpZnlJZCI6NCwic2VxdWVuY2VOdW1iZXIiOjh9; cto_bundle=MfHzdF8xZHpiejU5cjJNUDZ3cVdaN25KQk1UNzdzdFZrYlkxMUhINFlZQXRCVmluNHhISFJFZ1NpNE52STBFNHVlMjBBRWR0QmRzSkhvNVV6RlclMkJoZXZ5bHc5JTJGUWxnV2hXaXVYZzRjRDVLZnFMTGtPTnNHWmdmdWFZYnp2WFp0eGNSV0tJU3hDT2szRUZIUWhXYUkwcEM4RjBoTTMwVUclMkZ5UmNlcE9NdnpMVzZLaWJZNlMxeTk5dEFrcEJIY0RBYXlxNTVyJTJCVUFhRlNsTnptem9Pd3g1QlRXbFElM0QlM0Q; amplitude_id_b1c52e49f338d8374baef9be2e5d99ffquintoandar.com.br=eyJkZXZpY2VJZCI6ImQzMzkwNWM1LTUzYjYtNGI5ZC1iYTQ4LTcxZDY3YjQ0ZWE1ZVIiLCJ1c2VySWQiOm51bGwsIm9wdE91dCI6ZmFsc2UsInNlc3Npb25JZCI6MTcwMjU3NDU3NTMzNywibGFzdEV2ZW50VGltZSI6MTcwMjU3NDU3NTM0MywiZXZlbnRJZCI6MSwiaWRlbnRpZnlJZCI6NCwic2VxdWVuY2VOdW1iZXIiOjV9; _hjSessionUser_2797747=eyJpZCI6ImRhODUwNmEwLWIzOGItNThjZi1iNjI1LWUxYjQ0MWY5NjNjMCIsImNyZWF0ZWQiOjE3MDI1NzQ1NzU2MTksImV4aXN0aW5nIjpmYWxzZX0=; _ga_EN5X36BXTN=GS1.1.1702574575.1.1.1702574652.0.0.0; _ga_RM6FW4MM8F=GS1.1.1702574575.1.1.1702574652.60.0.0; _ga_1W6FE6T2GS=GS1.1.1702574575.1.1.1702574652.0.0.0; LISTING_PAGE_VIEW_COUNT=4; _uetvid=d424f7b041ef11eea613dfaade2cfa7d; _ga_2NHZ8V3TH0=GS1.1.1704458509.18.1.1704458520.49.0.0; amplitude_id_3fbf25d58c3cce92f0e6609904a37cc9quintoandar.com.br=eyJkZXZpY2VJZCI6IlExMldXNDV3WS14dm5HeElSUkpWbVVQMFZzWFpwUjV3Ti1henZWV0hiYThpUnRIWlVkMXVSUSIsInVzZXJJZCI6bnVsbCwib3B0T3V0IjpmYWxzZSwic2Vzc2lvbklkIjoxNzA0NDU4NTA4NzkyLCJsYXN0RXZlbnRUaW1lIjoxNzA0NDU4NTIxNzkwLCJldmVudElkIjoyMDgsImlkZW50aWZ5SWQiOjE1MjQsInNlcXVlbmNlTnVtYmVyIjoxNzMyfQ==; X-AB-Test=ab_cozy_find_house_card:0,ab_cozy_refresh_first_wave:0,ab_finding_house_card:1,ab_listing_experiments_disabled:-1,ab_listing_reports:1,ab_listing_sale_pricing_report:1,ab_remove_document_number:-1,ab_search_services_clusters_from_elastic_v0:0,ab_social_login_v2:1,ab_tof_listing_age_v1:1; amp_b081f8=HDslwWE2-CKF7yQSalMpS7.dXNlcjpkZWZhdWx0L2VkdWFyZG8ucGF6..1hmpi5san.1hmpi5san.sl.0.sl; _hjSession_1203740=eyJpZCI6IjYzY2MyNDdjLTJhZjAtNGY0ZC1hNTUyLWM5Y2E3ODhjZGNjZiIsImMiOjE3MDgxMDgxMjMwNTUsInMiOjAsInIiOjAsInNiIjowLCJzciI6MCwic2UiOjAsImZzIjowLCJzcCI6MH0=; 5AJWT_AUTH=eyJhbGciOiJSUzI1NiJ9.eyJqdGkiOiJMTHBOWDJLWlB5UEZTUkoyWXUwMHZRIiwiaWF0IjoxNzA4MTA4MTU5LCJpc3MiOiJnYW5kYWxmIiwiaWQiOjQyNjI5NTksIm5hbWUiOiJFZHUgUGF6IiwiZmlyc3RuYW1lIjoiRWR1IiwidGl0dWxvIjpudWxsLCJlbWFpbCI6Impvb2VkdWFyZG84QGdtYWlsLmNvbSIsInRlbGVmb25lIjoiKzU1MTE5MTczMTc2NDUiLCJjcmVhdGlvbkRhdGUiOiIxNi8wMi8yMDI0IDE4OjI5IiwidXNlckNyZWF0ZWRBdCI6IjIwMjItMTEtMjhUMTM6MTc6MjNaIiwicGVyc29uVVVJRCI6IjU5MzYzNTUyLThkYzAtNDNhYy05YmY5LWRhODYzMzM2ZTQxNSIsImV4cCI6MTcwODE5NDU1OX0.duvBX6m2IGVz7s8EJ6Umihe6KIHJWiG_XSO_IDBW8XutYM_nitwu-mLwEx-elDxl7v1SDPwka7Ydv9eo993d1uH8DxfrJCFaBocou8plk_y7-alGXZnsSKhq05zuseEKUich1aRxZhIntW22S8W6WvkUzfpYgl9BaFhZ7_uj1sID8R_f28a5WIf2Lc9S-pxbmlpl_iL9ZClP3aVtL5Cb9zH89aYi5KADua8wX4Uu09Un0HMIMMZ1P4i4fxDQ5dLhuDZuVCus8FjjXx2hYam0GrPJ2ZLVayCqGQc_w72HhzcS_XkxVDyRdv9UvEjKSeHRv-zBWpROuB4kAfWSLqvOQw; ab.storage.userId.b5dec186-a708-4695-a464-dba7cf8a24df=%7B%22g%22%3A%224262959%22%2C%22c%22%3A1708108160176%2C%22l%22%3A1708108160176%7D; 5ANNEX=eyJ1dWlkIjoiZS1fcHB2N2RQVGlrN2ZsREp2cy03WUh3TGZUTDZXOEJDTTBjZ3NrYW5hSWc4TFhsOW1GdHJBIiwibGxpdSI6NDI2Mjk1OSwiY2xhYiI6MCwiZiI6W3siayI6InJjX2JlYWttYW5fZW5hYmxlZF9saXN0aW5nX3N0YXRpY19hcHBiYXIiLCJ2Ijp0cnVlLCJ0IjoiciJ9LHsiayI6InJjX2JlYWttYW5fZW5hYmxlZF9saXN0aW5nX3NpbWlsYXJfbGlzdHMiLCJ2Ijp0cnVlLCJ0IjoiciJ9LHsiayI6Imxpc3RpbmdfY3VzdG9tZXJfZmFjaW5nX2JmZl9hcGlfY2FsbCIsInYiOmZhbHNlLCJ0IjoiaSJ9LHsiayI6Imxpc3Rpbmdfc2FsZV9wcmljaW5nX3JlcG9ydCIsInYiOnRydWUsInQiOiJpIn0seyJrIjoicmNfYmVha21hbl9lbmFibGVkX2Zhdm9yaXRlc19hdmFpbGFiaWxpdHlfYWxlcnQiLCJ2IjpmYWxzZSwidCI6InIifV19; _ga_LVWH83L1LK=GS1.1.1708108121.3.1.1708108220.31.0.0; ab.storage.sessionId.b5dec186-a708-4695-a464-dba7cf8a24df=%7B%22g%22%3A%22b4957762-e118-2554-941b-79839d4869d0%22%2C%22e%22%3A1708110020808%2C%22c%22%3A1708108160178%2C%22l%22%3A1708108220808%7D; amplitude_id_9e4d4c171e166ec901e453a00aa2b044quintoandar.com.br=eyJkZXZpY2VJZCI6ImUtX3BwdjdkUFRpazdmbERKdnMtN1lId0xmVEw2VzhCQ00wY2dza2FuYUlnOExYbDltRnRyQSIsInVzZXJJZCI6IjQyNjI5NTkiLCJvcHRPdXQiOmZhbHNlLCJzZXNzaW9uSWQiOjE3MDgxMDgxMTg5NjIsImxhc3RFdmVudFRpbWUiOjE3MDgxMDgyMjA4MTYsImV2ZW50SWQiOjIyMSwiaWRlbnRpZnlJZCI6MTA5NSwic2VxdWVuY2VOdW1iZXIiOjEzMTZ9' \\
+  -H 'sec-ch-ua: "Not A(Brand";v="99", "Google Chrome";v="121", "Chromium";v="121"' \\
+  -H 'sec-ch-ua-mobile: ?0' \\
+  -H 'sec-ch-ua-platform: "macOS"' \\
+  -H 'sec-fetch-dest: empty' \\
+  -H 'sec-fetch-mode: cors' \\
+  -H 'sec-fetch-site: same-origin' \\
+  -H 'user-agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36' \\
+  -H 'x-instana-l: 1,correlationType=web;correlationId=38974fd3658da429' \\
+  -H 'x-instana-s: 38974fd3658da429' \\
+  -H 'x-instana-t: 38974fd3658da429' \\
+  --compressed
+history | less
+gl
+v .tool-versions
+gs
+ga .
+gs
+gcb fix/migrate-yellow-pages-route
+gb -m fix/CRMG-219-migrate-yellow-pages-route
+gp
+glom
+gco kiss/parallel-fotografos-area
+exit
+git restore .
+gco kiss/parallel-fotografos-area
+gfa
+gl
+git stash
+gco master
+gl
+git stash pop
+gs
+git push --set-upstream origin
+git push --set-upstream origin HEAD
+gl
+glom
+exit
+gco forno
+gfa
+grhm
+gm fix/CRMG-219-migrate-yellow-pages-route
+gs
+gpf
+gco -
+gco forno
+gm fix/CRMG-219-migrate-yellow-pages-route
+gp
+qli kv get  /apps/forno/user-segmentation/marketing-hub-api-token
+qli kv get /apps/forno/notify-you/sentry-dsn
+qli kv get /apps/forno/notify-you/trino-jdbc-connection
+qli kv get /iam/service_accounts/growth_trino_user
+gco master
+gco master -f
+gl
+qli env set prod
+qli database get prod-readonly-ebdb --ttl=48h
+gco master
+gl
+gco forno
+gl
+gfa
+grhf
+gc
+curl --location 'https://notify-you-api.forno.quintoandar.com.br/v1/price-reduction/trigger' \\
+--header 'Content-Type: application/json' \\
+--data '{\
+    "content": {\
+        "category": "most-viewed",\
+        "numberOfRecommendations": 4,\
+        "campaignId": "01166722-f9f8-46f7-a10e-f006acd00c78",\
+        "filterCriteria": {\
+            "listingTags": "RENT_PRICE_DECREASED"\
+        }\
+    },\
+    "user": {\
+        "id": 4262959\
+    }\
+}'
+qli k8s port-forward -c sandbox-03
+curl --location 'localhost:8080/v1/price-reduction/trigger' \\
+--header 'Content-Type: application/json' \\
+--header 'Cookie: JSESSIONID=50E15554E2287DAC8E6B9BE12E6165D1' \\
+--data '{\
+    "content": {\
+        "category": "most-viewed",\
+        "numberOfRecommendations": 4,\
+        "campaignId": "01166722-f9f8-46f7-a10e-f006acd00c78",\
+        "filterCriteria": {\
+            "listingTags": "RENT_PRICE_DECREASED"\
+        }\
+    },\
+    "user": {\
+        "id": 4262959\
+    }\
+}'
+..
+e
+rm -rf competec
+brew install gh
+git restore HEAD~
+git reset HEAD~
+git revert HEAD~
+gs
+git revert --abort
+gs
+gl
+gs
+gco forno
+gm fix/CRMG-219-migrate-yellow-pages-route
+gp
+gco forno
+gm master
+gp
+gco -
+gcb feat/migrate-alerts-from-passive-journey-to-crm
+gfa
+exit
+gco master
+gl
+gco master
+gl
+gco master
+gl
+flutter
+brew install flutter
+bubu
+dart
+which dart
+flutter doctor
+$FLUTTER_HOME
+which flutter
+cd /opt/homebrew
+e
+e bin/flutter
+e share/flutter
+e share/flutter/bin/cache/
+cd share/flutter/bin/cache/
+e
+cd
+cd -
+cd /opt/homebrew/share
+e
+cd flutter
+e
+cd bin
+e
+cd cache
+e
+cd dart-sdk
+pwd
+flutter doctor
+brew install android-studio cocoapods
+flutter doctor
+cd
+flutter doctor
+flutter doctor --android-licenses
+/Users/eduardopaz/Library/Android/sdk --install "cmdline-tools;latest"
+sudo /Users/eduardopaz/Library/Android/sdk --install "cmdline-tools;latest"
+sdkmanager
+flutter doctor 
+flutter doctor --android-licenses
+flutter doctor 
+exit
+dart pub token add https://quintoandar.jfrog.io/artifactory/api/pub/quinto-pub/
+dart pub token add "[https://quintoandar.jfrog.io/artifactory/api/pub/quinto-pub](https://quintoandar.jfrog.io/artifactory/api/pub/quinto-pub)"\
+
+flutter
+dart pub token add https://quintoandar.jfrog.io/artifactory/api/pub/quinto-pub/
+gl
+asdf list-all java | less
+asdf install java temurin-19.0.2+7
+../..
+e
+cd playground
+e
+rm -rf ktor-sample
+cd do
+cd dot_files
+gs
+v .gitignore
+gs
+ga .
+gc
+gs
+gp
+e
+cd scripts
+e
+brew leaves -r
+pbpaste >> brew-install
+e
+b brew-install
+brew list
+pbpaste >> brew-install
+b brew-install
+cd ..
+gs
+ga .
+gc
+gs
+gp
+cd
+e
+cd wallpapers
+w
+gs
+gl
+cd
+cd Documents
+e
+cd cofrinho
+e
+ea
+e
+ea
+git init
+e
+gs
+ga .
+gs
+gc
+gs
+git remote add origin git@github.com:EduardoPazz/obsidian.git\
+git branch -M main\
+git push -u origin main
+gs
+..
+e
+cd docs
+gs
+gl
+..
+e
+cd USP
+ea
+cd
+e
+e Downloads
+gs
+cd
+ea
+brew
+brew install telegram
+brew install telegram brave
+brew install telegram brave-browser
+cd
+cd Downloads
+e
+ls
+ls -a ~
+mv _zsh_history ~/.zsh_history
+ls -l ~
+ls -la ~
+mkdir -p Dev/pessoal
+rm -rf Dev
+cd
+mkdir -p Dev/pessoal
+mv Downloads/giu.zip Dev/pessoal
+git
+git clone git@github.com:EduardoPazz/dot_files.git
+ssh-keygen -t ed25519 -C "jooeduardo8@gmail.com"
+eval "$(ssh-agent -s)"
+open ~/.ssh/config
+touch ~/.ssh/config\
+
+vim ~/.ssh/config\
+
+v .ssh/id_ed25519
+ssh-add --apple-use-keychain ~/.ssh/id_ed25519\
+
+pbcopy < ~/.ssh/id_ed25519.pub
+git clone git@github.com:EduardoPazz/dot_files.git
+cd dot
+cd dot_files
+e
+ls
+cd scripts
+ls
+brew install brew-install
+brew install --help | less
+cat brew-install 
+cat brew-install | xargs echo
+cat brew-install | xargs brew install
+cat brew-install | xargs echo
+v brew-install
+vim brew-install
+cat brew-install | xargs echo
+vim brew-install
+cat brew-install | xargs echo
+vim brew-install
+cat brew-install | xargs echo
+cat brew-install | xargs brew install
+vim brew-install
+cat brew-install | xargs echo
+vim brew-install
+cat brew-install | xargs brew install
+exit
+: 1709842871:0;cd dot_files
+: 1709842875:0;ls
+: 1709842876:0;e
+: 1709842878:0;ls
+: 1709842881:0;cd config
+: 1709842882:0;ls
+: 1709842886:0;ls -a
+: 1709842889:0;cd home_dir
+: 1709842890:0;ls
+: 1709842901:0;bat gitconfig
+: 1709842906:0;brew install bat
+: 1709842926:0;bat gitconfig
+: 1709842946:0;ls -a
+: 1709842953:0;tldr ln
+: 1709842958:0;brew install tldr
+: 1709842967:0;tldr ln
+: 1709843018:0;ln -s dot_files/config/home_dir/gitconfig .gitconfig
+: 1709843032:0;..
+: 1709843035:0;cd scripts
+: 1709843042:0;ls
+: 1709843078:0;vim symlink-configs
+: 1709843126:0;../config
+: 1709843127:0;ls
+: 1709843130:0;cd home_dir
+: 1709843131:0;ls
+: 1709843148:0;ln -s dot_files/config/home_dir/ideavimrc .ideavimrc
+: 1709843159:0;ln -s dot_files/config/home_dir/vimrc .vimrc
+: 1709843188:0;ln -s dot_files/config/home_dir/zsh_history .zsh_history
+: 1709843237:0;cp .zsh_history dot_files/config/home_dir/zsh_history
+: 1709843264:0;ln -sf dot_files/config/home_dir/zshrc .zshrc
+: 1709843268:0;ls -a
+: 1709843273:0;bat .zshrc
+: 1709843283:0;exit

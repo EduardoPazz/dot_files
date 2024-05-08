@@ -1,0 +1,3 @@
+#!/bin/zsh
+
+ln -s dot_files/config/home_dir/gitconfig .gitconfig

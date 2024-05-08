@@ -1,21 +1,4 @@
-asdf
-bat
-cocoapods
-deno
-exa
-fd
-ffmpeg
-gh
-gradle
-maven
-nginx
-node
-oven-sh/bun/bun
-python@3.11
-starship
-tldr
-vimamethyst			brave-browser			keycue				postman				telegram
-android-studio			discord				microsoft-edge			rancher				utm
-anki				firefox				microsoft-remote-desktop	raycast				visual-studio-code
-around				flutter				notion				spotify				whatsapp
-authy				intellij-idea			obsidian			steam
+			
+anki				raycast				visual-studio-code
+notion				spotify				whatsapp
+intellij-idea			obsidian			steam

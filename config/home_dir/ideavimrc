@@ -1,8 +1,1 @@
-set ignorecase
-set incsearch
-set smartcase
-set hlsearch
-noremap <ESC> :noh<CR><ESC>
-
-Plug 'tpope/vim-surround'
-Plug 'vim-scripts/argtextobj.vim'
+source ~/.vimrc
