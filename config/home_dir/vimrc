@@ -1,6 +1,26 @@
-set ignorecase
+let mapleader = "\\"
+
+set number
 set incsearch
+set ignorecase
 set smartcase
+
+nnoremap j jzz
+nnoremap k kzz
+nnoremap { {zz
+nnoremap } }zz
+
+noremap <Up> <Nop>
+noremap <Down> <Nop>
+noremap <Left> <Nop>
+noremap <Right> <Nop>
+
+nnoremap <leader>r :reg<Enter>
+nnoremap <leader>u <C-R>
+
+vnoremap <leader>s :sort<Enter>
+
+packadd! matchit
 
 call plug#begin()
 Plug 'tpope/vim-surround'
