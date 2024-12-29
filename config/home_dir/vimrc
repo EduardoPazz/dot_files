@@ -11,12 +11,13 @@ set sidescrolloff=5
 
 " Mappings
 
-"" Disable arrow keys
+"" Disabled
 
 noremap <Up> <Nop>
 noremap <Down> <Nop>
 noremap <Left> <Nop>
 noremap <Right> <Nop>
+noremap <C-R> <Nop>
 
 "" Natural noh
 nnoremap <Esc> :noh<Enter>
