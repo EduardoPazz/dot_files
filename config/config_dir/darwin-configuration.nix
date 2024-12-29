@@ -190,8 +190,9 @@
   home-manager.users."eduardo.paz" =
     { ... }:
     {
-      programs.mise.enable = true;
+      programs.eza.enable = true;
       programs.jq.enable = true;
+      programs.mise.enable = true;
 
       programs.zoxide.enable = true;
       programs.zoxide.options = ["--cmd cd"];
