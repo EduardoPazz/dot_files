@@ -190,6 +190,7 @@
   home-manager.users."eduardo.paz" =
     { ... }:
     {
+      programs.bat.enable = true;
       programs.eza.enable = true;
       programs.jq.enable = true;
       programs.mise.enable = true;
@@ -206,25 +207,43 @@
       programs.kitty.themeFile = "SpaceGray_Eighties";
 
       programs.atuin.enable = true;
-
-      programs.starship.enable = true;
+      programs.atuin.flags = ["--disable-up-arrow"];
 
       programs.zsh.enable = true;
 
-      # programs.zsh.prezto.enable = true;
+      programs.zsh.prezto.enable = true;
+      programs.zsh.prezto.editor.keymap = "vi";
 
-      programs.zsh.autosuggestion.enable = true;
-      programs.zsh.historySubstringSearch.enable = true;
-      programs.zsh.syntaxHighlighting.enable = true;
+      programs.zsh.prezto.pmodules = [
+        "editor"
 
-      programs.zsh.oh-my-zsh.enable = true;
-      programs.zsh.oh-my-zsh.plugins = [
-        "aliases"
-        "colored-man-pages"
+        "syntax-highlighting"
+        "history-substring-search"
+        "zsh-autosuggestions"
+
         "git"
-        "sudo"
-        "vi-mode"
+        "utility"
+        "completion"
       ];
+
+      programs.zsh.prezto.extraConfig = ''
+        zstyle ':prezto:module:git:alias' skip 'yes'
+      '';
+
+      # --
+
+      # programs.zsh.autosuggestion.enable = true;
+      # programs.zsh.historySubstringSearch.enable = true;
+      # programs.zsh.syntaxHighlighting.enable = true;
+
+      # programs.zsh.oh-my-zsh.enable = true;
+      # programs.zsh.oh-my-zsh.plugins = [
+      #   "aliases"
+      #   "colored-man-pages"
+      #   "git"
+      #   "sudo"
+      #   "vi-mode"
+      # ];
 
       # DO NOT CHANGE
       # The state version is required and should stay at the version you
