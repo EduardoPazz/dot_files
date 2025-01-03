@@ -91,19 +91,21 @@
   services.aerospace.settings.gaps.outer.top = 5;
   services.aerospace.settings.gaps.outer.right = 5;
 
-  # TO-DO
-  # services.aerospace.settings.on-window-detected = [
-  #   "if.app-id = 'com.jetbrains.intellij'"
-  #   "run = 'move-node-to-workspace D'"
-  # ];
-  # services.aerospace.settings.on-window-detected = [
-  #   "if.app-id = 'com.postmanlabs.mac'"
-  #   "run = 'move-node-to-workspace D'"
-  # ];
-  # services.aerospace.settings.on-window-detected = [
-  #   "if.app-id = 'org.mozilla.firefox'"
-  #   "run = 'move-node-to-workspace D'"
-  # ];
+  services.aerospace.settings.on-window-detected = [
+    {
+      check-further-callbacks = true;
+      "if".app-id = "com.postmanlabs.mac";
+      run = [ "move-node-to-workspace D" ];
+    }
+    {
+      check-further-callbacks = true;
+      "if".app-id = "org.mozilla.firefox";
+      run = [ "move-node-to-workspace D" ];
+    }{
+      "if".app-id = "com.jetbrains.intellij";
+      run = [ "move-node-to-workspace D" ];
+    }
+  ];
 
   services.aerospace.settings.mode.main.binding.alt-slash = "layout tiles horizontal vertical";
   services.aerospace.settings.mode.main.binding.alt-comma = "layout accordion horizontal";
@@ -187,6 +189,10 @@
   ## Homebrew packages
 
   homebrew.casks = [
+    {
+      name = "firefox";
+      greedy = true;
+    }
     {
       name = "notion";
       greedy = true;
