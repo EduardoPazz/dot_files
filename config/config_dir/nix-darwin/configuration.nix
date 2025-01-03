@@ -46,9 +46,14 @@
     v = "vim";
 
     cp = "cp -vi";
+    ln = "ln -vi";
     mv = "mv -vi";
     rm = "rm -vi";
 
+    gl = "git pull";
+    gagc = "git add . && git commit";
+    gp = "git push";
+    gs = "git status";
     grhforno = "git reset --hard origin/forno";
     grhmain = "git reset --hard origin/main";
     grhmaster = "git reset --hard origin/master";
@@ -123,6 +128,13 @@
   services.aerospace.settings.mode.main.binding.alt-5 = "workspace 5";
   services.aerospace.settings.mode.main.binding.alt-d = "workspace D";
 
+  services.aerospace.settings.mode.main.binding.alt-shift-1 = "move-node-to-workspace 1";
+  services.aerospace.settings.mode.main.binding.alt-shift-2 = "move-node-to-workspace 2";
+  services.aerospace.settings.mode.main.binding.alt-shift-3 = "move-node-to-workspace 3";
+  services.aerospace.settings.mode.main.binding.alt-shift-4 = "move-node-to-workspace 4";
+  services.aerospace.settings.mode.main.binding.alt-shift-5 = "move-node-to-workspace 5";
+  services.aerospace.settings.mode.main.binding.alt-shift-d = "move-node-to-workspace D";
+
   services.aerospace.settings.mode.main.binding.alt-tab = "workspace-back-and-forth";
   services.aerospace.settings.mode.main.binding.alt-shift-tab =
     "move-workspace-to-monitor --wrap-around next";
@@ -191,12 +203,22 @@
     { ... }:
     {
       programs.bat.enable = true;
+      programs.btop.enable = true;
       programs.eza.enable = true;
       programs.jq.enable = true;
       programs.mise.enable = true;
+      programs.zsh.enable = true;
 
-      programs.zoxide.enable = true;
-      programs.zoxide.options = ["--cmd cd"];
+      programs.starship.enable = true;
+      programs.starship.settings = {
+        character = {
+          success_symbol = "[󱢇](bold green)";
+          error_symbol = "[󱢇](bold red)";
+        };
+      };
+
+      programs.atuin.enable = true;
+      programs.atuin.flags = [ "--disable-up-arrow" ];
 
       programs.yazi.enable = true;
       programs.yazi.shellWrapperName = "y";
@@ -205,45 +227,30 @@
       programs.kitty.font.name = "FiraCode Nerd Font";
       programs.kitty.font.size = 16;
       programs.kitty.themeFile = "SpaceGray_Eighties";
+      programs.kitty.settings = {
+        window_padding_width = 5;
+      };
 
-      programs.atuin.enable = true;
-      programs.atuin.flags = ["--disable-up-arrow"];
-
-      programs.zsh.enable = true;
+      programs.zoxide.enable = true;
+      programs.zoxide.options = [ "--cmd cd" ];
 
       programs.zsh.prezto.enable = true;
       programs.zsh.prezto.editor.keymap = "vi";
-
+      programs.zsh.prezto.utility.safeOps = false;
       programs.zsh.prezto.pmodules = [
         "editor"
 
         "syntax-highlighting"
         "history-substring-search"
-        "zsh-autosuggestions"
+        "autosuggestions"
 
         "git"
         "utility"
         "completion"
       ];
-
       programs.zsh.prezto.extraConfig = ''
         zstyle ':prezto:module:git:alias' skip 'yes'
       '';
-
-      # --
-
-      # programs.zsh.autosuggestion.enable = true;
-      # programs.zsh.historySubstringSearch.enable = true;
-      # programs.zsh.syntaxHighlighting.enable = true;
-
-      # programs.zsh.oh-my-zsh.enable = true;
-      # programs.zsh.oh-my-zsh.plugins = [
-      #   "aliases"
-      #   "colored-man-pages"
-      #   "git"
-      #   "sudo"
-      #   "vi-mode"
-      # ];
 
       # DO NOT CHANGE
       # The state version is required and should stay at the version you
